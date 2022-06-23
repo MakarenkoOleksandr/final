@@ -1,5 +1,10 @@
 @use "../../node_modules/normalize.css/normalize.css";
 
-@use "presets";
 @use "common";
+@use "presets";
 @use "mixins";
+
+@use "pages/page-header/page-header";
+@use "pages/page-header/page-header-content.scss";
+@use "pages/page-header/page-header-actions";
+@use "pages/page-header/page-header-menu";

@@ -1,0 +1,17 @@
+@use "../presets" as *;
+
+.container {
+    max-width: $ul;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    font-size: 42px;
+    line-height: 50px;
+}
+
+.active {
+}

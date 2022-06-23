@@ -1,0 +1,14 @@
+@use "../../presets" as *;
+
+.page-header__menu {
+    grid-area: menu;
+}
+
+.menu__list {
+    display: flex;
+    list-style: none;
+}
+.menu__item {
+}
+.menu__link {
+}
