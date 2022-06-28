@@ -26,13 +26,15 @@ a {
     }
 
     &::before {
-        @include abs-position;
-        content: "";
+        @include sm-min {
+            @include abs-position;
+            content: "";
 
-        background-image: url(../img/page-home/header/header-bg.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 100%;
-        background-size: 85vh;
+            background-image: url(../img/page-home/header/header-bg.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: 85vh;
+        }
     }
 
     &__grid {
