@@ -313,31 +313,31 @@ template {
 
 @font-face {
   font-family: "TT Norms";
-  src: url("../fonts/TTNorms-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/TTNorms-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "TT Norms";
-  src: url("../fonts/TTNorms-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/TTNorms-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "TT Norms";
-  src: url("../fonts/TTNorms-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/TTNorms-Medium.woff2") format("woff2");
 }
 .container {
   max-width: 1360px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .hero {
@@ -356,72 +356,25 @@ template {
 
 html {
   font-family: "TT Norms";
-  font-weight: normal;
   font-size: 16px;
+  font-weight: normal;
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 38px;
-  line-height: 45px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 32px;
-  line-height: 38px;
-  color: #323264;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 28px;
-  color: #323264;
-}
-
-h3.caps {
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #323264;
-}
-
+h1,
+h2,
+h3,
+h3.caps,
 h4 {
-  font-size: 18px;
-  line-height: 21px;
-  color: #323264;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.44;
-  color: #000000;
-}
-
-ul {
-  color: #f0145a;
-}
-
-ol {
-  font-size: 18px;
-  line-height: 1.44;
-  color: #f0145a;
+  margin: 0;
+  color: #ffffff;
 }
 
 a {
   text-decoration: none;
 }
 
-a.active {
-  font-size: 16px;
-  line-height: 1.25;
-  color: #24a3ff;
-}
-
 a:hover {
-  font-size: 16px;
-  line-height: 1.25;
   color: #f0145a;
 }
 
@@ -431,15 +384,152 @@ a:hover {
 /* md */
 /* sm */
 /* xs */
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  grid-area: actions;
+}
+.actions__languages {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.actions__languages > a:hover {
+  font-size: 12px;
+}
+.actions__languages::after {
+  position: absolute;
+  top: 12px;
+  right: -16px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-radius: 6px;
+  background-color: #e6e6f0;
+}
+.actions__locations {
+  position: relative;
+  font-weight: 400;
+}
+.actions__locations::after {
+  position: absolute;
+  top: 7px;
+  right: -16px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-radius: 6px;
+  background-color: #e6e6f0;
+}
+.actions__phones {
+  position: relative;
+  font-weight: 700;
+}
+.actions__phones::after {
+  position: absolute;
+  top: 7px;
+  right: -16px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-radius: 6px;
+  background-color: #e6e6f0;
+}
+
+.page-header__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.page-header__content-title {
+  position: absolute;
+  top: 60px;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 38px;
+}
+
+a {
+  color: #ffffff;
+}
+
+.active {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: -5px;
+  padding: 5px;
+  border-radius: 8px;
+  background: #f0145a;
+}
+
+.active:hover {
+  color: #ffffff;
+}
+
 .page-header {
+  position: relative;
+  min-height: 100vh;
   background: -o-linear-gradient(48deg, #323264 14%, #323264 51.39%, #7a425e 87%);
   background: linear-gradient(42deg, #323264 14%, #323264 51.39%, #7a425e 87%);
-  color: #ffffff;
+}
+.page-header::after {
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(16.67%, rgba(50, 50, 100, 0)), to(#323264));
+  background: -o-linear-gradient(top, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+  position: absolute;
+  min-height: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.page-header::before {
+  content: "";
+  background-image: url(../img/page-home/header/header-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 85vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .page-header__grid {
   display: grid;
-  grid-template-areas: "logo actions" "logo menu";
-  gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -447,18 +537,33 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 50px;
+  gap: 20px;
+  grid-template-areas: "logo actions" "logo menu";
 }
-.page-header__image {
-  grid-area: logo;
-}
-.page-header__actions {
+.page-header__button {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 20px;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-area: actions;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+.page-header__image {
+  grid-area: logo;
+}
 .page-header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   grid-area: menu;
 }
 
@@ -467,4 +572,8 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  gap: 15px;
+}
+.menu__link {
+  font-size: 18px;
 }

@@ -1,0 +1,83 @@
+@use "../../presets" as *;
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  column-gap: 25px;
+  grid-area: actions;
+
+  &__languages {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 4px;
+
+    letter-spacing: 1px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    column-gap: $gap-sm;
+  }
+
+  &__languages > a:hover {
+    font-size: 12px;
+  }
+
+  &__languages::after {
+    position: absolute;
+    top: 12px;
+    right: -16px;
+
+    width: 6px;
+    height: 6px;
+
+    content: "";
+
+    border-radius: 6px;
+    background-color: $color-grey-separator;
+  }
+
+  &__locations {
+    position: relative;
+
+    font-weight: 400;
+  }
+
+  &__locations::after {
+    position: absolute;
+    top: 7px;
+    right: -16px;
+
+    width: 6px;
+    height: 6px;
+
+    content: "";
+
+    border-radius: 6px;
+    background-color: $color-grey-separator;
+  }
+
+  &__phones {
+    position: relative;
+
+    font-weight: 700;
+  }
+
+  &__phones::after {
+    position: absolute;
+    top: 7px;
+    right: -16px;
+
+    width: 6px;
+    height: 6px;
+
+    content: "";
+
+    border-radius: 6px;
+    background-color: $color-grey-separator;
+  }
+}

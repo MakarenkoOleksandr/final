@@ -1,0 +1,28 @@
+@use "../../presets" as *;
+
+.page-header {
+    &__image {
+        grid-area: logo;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: flex-end;
+
+        grid-area: menu;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+
+        list-style: none;
+
+        gap: 15px;
+    }
+
+    &__link {
+        font-size: 18px;
+    }
+}

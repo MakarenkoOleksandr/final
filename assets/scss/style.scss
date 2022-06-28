@@ -4,7 +4,4 @@
 @use "presets";
 @use "mixins";
 
-@use "pages/page-header/page-header";
-@use "pages/page-header/page-header-content.scss";
-@use "pages/page-header/page-header-actions";
-@use "pages/page-header/page-header-menu";
+@use "pages/page-header";
