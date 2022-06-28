@@ -1,4 +1,5 @@
 @use "../../presets" as *;
+@use "../../mixins" as *;
 
 .actions {
   display: flex;
@@ -6,6 +7,9 @@
 
   column-gap: 25px;
   grid-area: actions;
+  @include sm {
+    justify-content: space-between;
+  }
 
   &__languages {
     position: relative;
@@ -21,10 +25,21 @@
     font-weight: 700;
 
     column-gap: $gap-sm;
-  }
 
-  &__languages > a:hover {
-    font-size: 12px;
+    &-active {
+      align-self: center;
+
+      margin-right: -5px;
+      padding: 5px;
+
+      border-radius: 8px;
+      background: $color-accent;
+    }
+    &-active:hover {
+      @include sm-min {
+        color: $color-white;
+      }
+    }
   }
 
   &__languages::after {
@@ -39,12 +54,31 @@
 
     border-radius: 6px;
     background-color: $color-grey-separator;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__language-ru {
+    @include sm {
+      color: $color-grey-text;
+    }
+  }
+  &__language-en {
+    @include sm {
+      color: $color-grey-text;
+    }
   }
 
   &__locations {
     position: relative;
 
     font-weight: 400;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__locations::after {
@@ -59,6 +93,10 @@
 
     border-radius: 6px;
     background-color: $color-grey-separator;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__phones {
@@ -79,5 +117,21 @@
 
     border-radius: 6px;
     background-color: $color-grey-separator;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__phone-url {
+    @include sm {
+      color: $color-grey-text;
+    }
+  }
+
+  &__socials {
+    @include sm {
+      display: none;
+    }
   }
 }

@@ -1,21 +1,8 @@
 @use "../../presets" as *;
+@use "../../mixins" as *;
 
 a {
     color: #ffffff;
-}
-
-.active {
-    align-self: center;
-
-    margin-right: -5px;
-    padding: 5px;
-
-    border-radius: 8px;
-    background: $color-accent;
-}
-
-.active:hover {
-    color: $color-white;
 }
 
 .page-header {
@@ -26,45 +13,60 @@ a {
     background: linear-gradient($color-gradient-soft);
 
     &::after {
-        content: "";
-        background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
         position: absolute;
-        min-height: 200px;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
+
+        min-height: 200px;
+
+        content: "";
+
+        background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
     }
 
     &::before {
+        @include abs-position;
         content: "";
+
         background-image: url(../img/page-home/header/header-bg.svg);
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 85vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
     }
 
     &__grid {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
         display: grid;
         align-items: center;
         justify-content: space-between;
+        @extend %container;
 
-        padding-top: 50px;
+        @include sm-min {
+            padding-top: 50px;
 
-        gap: $gap;
-        grid-template-areas: "logo actions" "logo menu";
+            gap: $gap;
+            grid-template-areas: "logo actions" "logo menu";
+        }
+        @include sm {
+            padding-top: $gap;
+
+            gap: $gap;
+            grid-template-areas: "actions actions" "logo menu";
+        }
     }
 
     &__button {
         position: absolute;
+        z-index: 1;
         right: 0;
         left: 0;
         bottom: 20px;
-        z-index: 1;
+
         display: flex;
         justify-content: center;
     }

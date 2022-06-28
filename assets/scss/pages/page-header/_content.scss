@@ -1,24 +1,27 @@
 @use "../../presets" as *;
+@use "../../mixins" as *;
 
 .page-header__content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
 
-    &-title {
-        position: absolute;
-        top: 60px;
+  &-title {
+    position: relative;
+    top: 150px;
+    max-width: 600px;
 
-        max-width: 600px;
+    text-align: center;
 
-        text-align: center;
-        font-weight: 500;
-        font-size: 38px;
-    }
+    font-size: 38px;
+    font-weight: 500;
+  }
 }
