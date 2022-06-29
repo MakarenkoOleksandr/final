@@ -4,4 +4,5 @@
 @use "presets";
 @use "mixins";
 
-@use "pages/page-header";
+@use "pages/homepage/header";
+@use "pages/homepage/main";
