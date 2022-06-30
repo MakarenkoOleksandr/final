@@ -1,0 +1,40 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.team {
+    padding-top: $gap-md;
+    padding-bottom: $gap-md;
+
+    &__container {
+        @extend %container;
+    }
+    &__grid {
+        display: grid;
+        grid-template-areas: ;
+        background-color: $color-grey-bg;
+        border-radius: 12px;
+    }
+    &__photo {
+        grid-area: photo;
+    }
+    &__photo-image {
+    }
+    &__page-link {
+        grid-area: link;
+    }
+    &__page-url {
+    }
+    &__note {
+        grid-area: note;
+    }
+    &__name {
+        grid-area: name;
+    }
+    &__rank {
+        grid-area: rank;
+    }
+    &__indicators {
+    }
+    &__indicator {
+    }
+}

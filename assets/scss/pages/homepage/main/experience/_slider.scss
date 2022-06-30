@@ -145,26 +145,11 @@
             }
         }
     }
-    &__indicators {
-        display: flex;
-        justify-content: center;
-        margin-top: $gap;
 
-        column-gap: 15px;
+    &__indicators {
+        margin-top: $gap-md;
         @include md-min {
             display: none;
-        }
-    }
-    &__indicator {
-        width: 16px;
-        height: 16px;
-
-        opacity: 0.2;
-        border-radius: 8px;
-        background-color: $color-active-regular;
-
-        &.active {
-            opacity: 1;
         }
     }
 }
