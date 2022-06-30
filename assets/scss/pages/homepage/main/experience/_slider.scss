@@ -99,6 +99,8 @@
     }
 
     &__notes {
+        min-height: max-content;
+        display: flex;
         flex-basis: 0;
         flex-grow: 3;
         flex-shrink: 0;

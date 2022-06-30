@@ -2,8 +2,14 @@
 @use "../../../../mixins" as *;
 
 .team {
-    padding-top: 60px;
-    padding-bottom: $gap-md;
+    @include md-min {
+        padding-top: 60px;
+        padding-bottom: $gap-md;
+    }
+    @include md {
+        padding-top: $gap-md;
+        padding-bottom: 30px;
+    }
 
     &__container {
         @extend %container;
@@ -15,30 +21,56 @@
         border-radius: 12px;
     }
     &__photo {
-    }
-    &__photo-image {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 0;
+        @include sm {
+            display: none;
+        }
     }
 
     &__content {
-        padding-top: $gap-md;
+        flex-grow: 2;
+        flex-shrink: 0;
+        flex-basis: 0;
+        @include md-min {
+            padding-top: $gap-md;
+        }
+        @include md {
+            padding-top: $gap;
+        }
+        @include sm {
+            display: grid;
+            grid-template-areas: "link link" "note note" "photo names";
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            padding-left: $gap;
+            padding-bottom: $gap;
+        }
         &-photo {
-            position: absolute;
-            z-index: -9999;
-            opacity: 0;
+            grid-area: photo;
+            @include sm-min {
+                position: absolute;
+                z-index: -9999;
+                opacity: 0;
+            }
+            @include sm {
+                position: static;
+                z-index: inherit;
+                opacity: 1;
+            }
         }
     }
-    &__page-link {
-    }
+
     &__page-url {
         position: relative;
-        grid-area: link;
         font-weight: 700;
         font-size: 14px;
 
         text-transform: uppercase;
 
         color: $color-active-regular;
-
+        grid-area: link;
         &::after {
             content: "";
             position: absolute;
@@ -54,42 +86,60 @@
     &__note {
         padding-right: 30px;
         font-weight: 700;
-        font-size: 42px;
-        line-height: 50px;
+
         background: linear-gradient($color-gradient-red-text2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
         grid-area: note;
-        padding-bottom: $gap;
+        @include md-min {
+            padding-bottom: $gap;
+            font-size: 42px;
+        }
+        @include md {
+            padding-bottom: $gap-sm;
+            font-size: 32px;
+        }
     }
     &__names {
-        padding-bottom: 5px;
-        grid-area: names;
-        font-weight: 400;
-        font-size: 18px;
-
         color: $color-grey-text;
+        grid-area: names;
     }
     &__name {
         &-dekstop {
+            font-weight: 500;
+            font-size: 18px;
+            @include sm {
+                position: absolute;
+                z-index: -9999;
+                opacity: 0;
+            }
         }
         &-mobile {
-            position: absolute;
-            z-index: -9999;
-            opacity: 0;
+            font-weight: 500;
+            font-size: 18px;
+            @include sm-min {
+                position: absolute;
+                z-index: -9999;
+                opacity: 0;
+            }
+            @include sm {
+                position: static;
+                z-index: inherit;
+                opacity: 1;
+            }
+        }
+        &-rank {
+            padding-top: 5px;
         }
     }
-    &__rank {
-        font-weight: 400;
-
-        color: $color-grey-text;
-        grid-area: rank;
-    }
     &__indicators {
-        padding-top: $gap;
-    }
-    &__indicator {
+        @include sm-min {
+            padding-top: $gap;
+        }
+        @include sm {
+            padding-top: 15px;
+        }
     }
 }
