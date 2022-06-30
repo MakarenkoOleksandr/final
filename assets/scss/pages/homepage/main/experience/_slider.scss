@@ -2,156 +2,157 @@
 @use "../../../../mixins" as *;
 
 .slider {
+  display: flex;
+
+  column-gap: 80px;
+  @include md-min {
+    align-items: center;
+  }
+  @include md {
+    flex-direction: column;
+
+    row-gap: $gap-sm;
+  }
+
+  &__headers {
+    position: relative;
+
     display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-shrink: 0;
 
-    column-gap: 80px;
+    color: $color-grey-text;
+
+    font-weight: 700;
+
     @include md-min {
-        align-items: center;
+      text-align: right;
+
+      font-size: 42px;
     }
+    @include md-min {
+      &::after {
+        position: absolute;
+        top: 0;
+        right: -42px;
+
+        width: 4px;
+        height: 100%;
+
+        content: "";
+
+        background-color: $color-grey-separator;
+      }
+    }
+    row-gap: $gap;
+  }
+
+  &__header {
+    position: relative;
+
+    user-select: none;
+
     @include md {
-        flex-direction: column;
+      position: absolute;
+      z-index: -9999;
 
-        row-gap: $gap-sm;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      opacity: 0;
+
+      font-size: 14px;
     }
 
-    &__headers {
-        position: relative;
+    &.active {
+      background: linear-gradient($color-gradient-text);
+      -webkit-background-clip: text;
+              background-clip: text;
 
-        display: flex;
-        flex-basis: 0;
-        flex-direction: column;
-        flex-grow: 2;
-        flex-shrink: 0;
+      @include md-min {
+        &::after {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: -42px;
 
-        color: $color-grey-text;
+          width: 4px;
+          height: 100%;
 
-        font-weight: 700;
+          content: "";
 
-        @include md-min {
-            text-align: right;
-
-            font-size: 42px;
+          background-color: $color-accent;
         }
-        row-gap: $gap;
+      }
+      @include md {
+        position: static;
+        z-index: inherit;
 
-        @include md-min {
-            &::after {
-                position: absolute;
-                top: 0;
-                right: -42px;
-
-                width: 4px;
-                height: 100%;
-
-                content: "";
-
-                background-color: $color-grey-separator;
-            }
-        }
+        opacity: 1;
+      }
+      -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
     }
+  }
 
-    &__header {
-        position: relative;
-        user-select: none;
+  &__notes {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 3;
+    flex-shrink: 0;
 
-        @include md {
-            position: absolute;
-            z-index: -9999;
+    min-height: max-content;
 
-            letter-spacing: 1px;
-            text-transform: uppercase;
+    color: $color-white;
+  }
+  &__note {
+    &-item {
+      position: absolute;
+      z-index: -9999;
 
-            opacity: 0;
+      display: flex;
+      flex-direction: column;
 
-            font-size: 14px;
-        }
+      opacity: 0;
 
-        &.active {
-            background: linear-gradient($color-gradient-text);
-            -webkit-background-clip: text;
-            background-clip: text;
+      row-gap: $gap;
 
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
+      &.active {
+        position: static;
+        z-index: inherit;
 
-            @include md-min {
-                &::after {
-                    position: absolute;
-                    z-index: 1;
-                    top: 0;
-                    right: -42px;
-
-                    width: 4px;
-                    height: 100%;
-
-                    content: "";
-
-                    background-color: $color-accent;
-                }
-            }
-            @include md {
-                position: static;
-                z-index: inherit;
-
-                opacity: 1;
-            }
-        }
+        opacity: 1;
+      }
     }
+    &-title {
+      line-height: 1.43;
 
-    &__notes {
-        min-height: max-content;
-        display: flex;
-        flex-basis: 0;
-        flex-grow: 3;
-        flex-shrink: 0;
-
-        color: $color-white;
+      @include md-min {
+        font-size: 32px;
+      }
+      @include md {
+        font-size: 22px;
+      }
     }
-    &__note {
-        &-item {
-            position: absolute;
-            z-index: -9999;
+    &-description {
+      line-height: 1.43;
 
-            display: flex;
-            flex-direction: column;
-
-            opacity: 0;
-
-            row-gap: $gap;
-
-            &.active {
-                position: static;
-                z-index: inherit;
-
-                opacity: 1;
-            }
-        }
-        &-title {
-            line-height: 1.43;
-
-            @include md-min {
-                font-size: 32px;
-            }
-            @include md {
-                font-size: 22px;
-            }
-        }
-        &-description {
-            line-height: 1.43;
-
-            @include md-min {
-                font-size: 21px;
-            }
-            @include md {
-                font-size: 18px;
-            }
-        }
+      @include md-min {
+        font-size: 21px;
+      }
+      @include md {
+        font-size: 18px;
+      }
     }
+  }
 
-    &__indicators {
-        margin-top: $gap-md;
-        @include md-min {
-            display: none;
-        }
+  &__indicators {
+    margin-top: $gap-md;
+
+    @include md-min {
+      display: none;
     }
+  }
 }

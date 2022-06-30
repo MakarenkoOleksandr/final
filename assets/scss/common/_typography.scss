@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  background-color: $color-main;
   transition: transform 0.25s;
 
   line-height: 1.2;
@@ -45,11 +46,9 @@ body {
 h1,
 h2,
 h3,
-h3.caps,
 h4 {
   margin: 0;
-
-  color: $color-white;
+  padding: 0;
 }
 
 p {

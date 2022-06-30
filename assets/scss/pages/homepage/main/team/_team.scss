@@ -2,144 +2,167 @@
 @use "../../../../mixins" as *;
 
 .team {
+  @include md-min {
+    padding-top: 60px;
+    padding-bottom: $gap-md;
+  }
+  @include md {
+    padding-top: $gap-md;
+    padding-bottom: 30px;
+  }
+
+  &__container {
+    @extend %container;
+  }
+  &__wrapper {
+    display: flex;
+
+    border-radius: 12px;
+    background-color: $color-grey-bg;
+
+    column-gap: $gap-md;
+  }
+  &__photo {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex-basis: 0;
+    flex-grow: 2;
+    flex-shrink: 0;
+
     @include md-min {
-        padding-top: 60px;
-        padding-bottom: $gap-md;
+      padding-top: $gap-md;
     }
     @include md {
-        padding-top: $gap-md;
-        padding-bottom: 30px;
+      padding-top: $gap;
     }
+    @include sm {
+      display: grid;
+      align-items: center;
 
-    &__container {
-        @extend %container;
-    }
-    &__wrapper {
-        display: flex;
-        column-gap: $gap-md;
-        background-color: $color-grey-bg;
-        border-radius: 12px;
-    }
-    &__photo {
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 0;
-        @include sm {
-            display: none;
-        }
-    }
+      padding-bottom: $gap;
+      padding-left: $gap;
 
-    &__content {
-        flex-grow: 2;
-        flex-shrink: 0;
-        flex-basis: 0;
-        @include md-min {
-            padding-top: $gap-md;
-        }
-        @include md {
-            padding-top: $gap;
-        }
-        @include sm {
-            display: grid;
-            grid-template-areas: "link link" "note note" "photo names";
-            grid-template-columns: auto 1fr;
-            align-items: center;
-            padding-left: $gap;
-            padding-bottom: $gap;
-        }
-        &-photo {
-            grid-area: photo;
-            @include sm-min {
-                position: absolute;
-                z-index: -9999;
-                opacity: 0;
-            }
-            @include sm {
-                position: static;
-                z-index: inherit;
-                opacity: 1;
-            }
-        }
+      grid-template-areas: "link link" "note note" "photo names";
+      grid-template-columns: auto 1fr;
     }
+    &-photo {
+      grid-area: photo;
+      @include sm-min {
+        position: absolute;
+        z-index: -9999;
 
-    &__page-url {
-        position: relative;
-        font-weight: 700;
-        font-size: 14px;
+        opacity: 0;
+      }
+      @include sm {
+        position: static;
+        z-index: inherit;
 
-        text-transform: uppercase;
+        opacity: 1;
+      }
+    }
+  }
 
-        color: $color-active-regular;
-        grid-area: link;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 2px;
-            right: -22px;
-            background-image: url(../img/page-home/main/team/team-url-arrow.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 15px;
-            height: 12px;
-        }
-    }
-    &__note {
-        padding-right: 30px;
-        font-weight: 700;
+  &__page-url {
+    position: relative;
 
-        background: linear-gradient($color-gradient-red-text2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        grid-area: note;
-        @include md-min {
-            padding-bottom: $gap;
-            font-size: 42px;
-        }
-        @include md {
-            padding-bottom: $gap-sm;
-            font-size: 32px;
-        }
+    text-transform: uppercase;
+
+    color: $color-active-regular;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    grid-area: link;
+    &::after {
+      position: absolute;
+      right: -22px;
+      bottom: 2px;
+
+      width: 15px;
+      height: 12px;
+
+      content: "";
+
+      background-image: url(../img/page-home/main/team/team-url-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
-    &__names {
-        color: $color-grey-text;
-        grid-area: names;
+  }
+  &__note {
+    padding-right: 30px;
+
+    background: linear-gradient($color-gradient-red-text2);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-weight: 700;
+
+    grid-area: note;
+    @include md-min {
+      padding-bottom: $gap;
+
+      font-size: 42px;
     }
-    &__name {
-        &-dekstop {
-            font-weight: 500;
-            font-size: 18px;
-            @include sm {
-                position: absolute;
-                z-index: -9999;
-                opacity: 0;
-            }
-        }
-        &-mobile {
-            font-weight: 500;
-            font-size: 18px;
-            @include sm-min {
-                position: absolute;
-                z-index: -9999;
-                opacity: 0;
-            }
-            @include sm {
-                position: static;
-                z-index: inherit;
-                opacity: 1;
-            }
-        }
-        &-rank {
-            padding-top: 5px;
-        }
+    @include md {
+      padding-bottom: $gap-sm;
+
+      font-size: 32px;
     }
-    &__indicators {
-        @include sm-min {
-            padding-top: $gap;
-        }
-        @include sm {
-            padding-top: 15px;
-        }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+  }
+  &__names {
+    color: $color-grey-text;
+
+    grid-area: names;
+  }
+  &__name {
+    &-dekstop {
+      font-size: 18px;
+      font-weight: 500;
+
+      @include sm {
+        position: absolute;
+        z-index: -9999;
+
+        opacity: 0;
+      }
     }
+    &-mobile {
+      font-size: 18px;
+      font-weight: 500;
+
+      @include sm-min {
+        position: absolute;
+        z-index: -9999;
+
+        opacity: 0;
+      }
+      @include sm {
+        position: static;
+        z-index: inherit;
+
+        opacity: 1;
+      }
+    }
+    &-rank {
+      padding-top: 5px;
+    }
+  }
+  &__indicators {
+    @include sm-min {
+      padding-top: $gap;
+    }
+    @include sm {
+      padding-top: 15px;
+    }
+  }
 }

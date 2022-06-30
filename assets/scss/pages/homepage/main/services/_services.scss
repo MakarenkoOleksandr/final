@@ -2,120 +2,137 @@
 @use "../../../../mixins" as *;
 
 .services {
+  position: relative;
+
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient($color-gradient-supersoft);
+
+  @include md-min {
+    padding-bottom: 80px;
+  }
+  @include md {
+    padding-bottom: $gap;
+  }
+  &__container {
+    @extend %container;
+  }
+
+  &::after {
+    position: absolute;
+    right: 20px;
+    bottom: -10px;
+    left: 20px;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $color-bg-services;
+  }
+
+  &::before {
+    position: absolute;
+    right: 40px;
+    bottom: -20px;
+    left: 40px;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $color-bg-services2;
+  }
+  &__page-link {
     position: relative;
-    background: linear-gradient($color-gradient-supersoft);
-    border-radius: 0px 0px 12px 12px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+    color: $color-white;
+
+    font-size: 14px;
+    &::after {
+      position: absolute;
+      right: -18px;
+      bottom: 2px;
+
+      width: 15px;
+      height: 12px;
+
+      content: "";
+
+      background-image: url(../img/page-home/main/services/page-link-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__title {
+    background: linear-gradient($color-gradient-red-text);
+    -webkit-background-clip: text;
+            background-clip: text;
 
     @include md-min {
-        padding-bottom: 80px;
+      padding-bottom: 70px;
+
+      font-size: 42px;
     }
     @include md {
-        padding-bottom: $gap;
-    }
-    &__container {
-        @extend %container;
-    }
+      padding-bottom: $gap;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 20px;
-        right: 20px;
-        height: 10px;
-        background-color: $color-bg-services;
-        border-radius: 0px 0px 12px 12px;
+      font-size: 32px;
     }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+  }
+  &__grid {
+    display: grid;
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 40px;
-        right: 40px;
-        height: 10px;
-        background-color: $color-bg-services2;
-        border-radius: 0px 0px 12px 12px;
+    @include md-min {
+      column-gap: $gap-md;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 60px;
     }
-    &__page-link {
-        position: relative;
-        font-size: 14px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: $color-white;
-        opacity: 0.5;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 2px;
-            right: -18px;
-            background-image: url(../img/page-home/main/services/page-link-arrow.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 15px;
-            height: 12px;
-        }
+    @include md-xs {
+      gap: $gap-md;
+      grid-template-columns: repeat(2, 1fr);
     }
-    &__title {
-        background: linear-gradient($color-gradient-red-text);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        @include md-min {
-            font-size: 42px;
-            padding-bottom: 70px;
-        }
-        @include md {
-            font-size: 32px;
-            padding-bottom: $gap;
-        }
+    @include xs {
+      gap: $gap-md;
+      grid-template-columns: repeat(1, 1fr);
     }
-    &__grid {
-        display: grid;
-
-        @include md-min {
-            row-gap: 60px;
-            column-gap: $gap-md;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @include md-xs {
-            gap: $gap-md;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include xs {
-            gap: $gap-md;
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
+  }
 }
 .service {
-    &-item {
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
-    }
-    &__logo {
-    }
-    &__logo-image {
-    }
-    &__title {
-        font-weight: 500;
+  &-item {
+    display: flex;
+    flex-direction: column;
 
-        color: $color-active-regular;
-        @include md-min {
-            font-size: 24px;
-        }
-        @include md {
-            font-size: 18px;
-        }
-    }
-    &__description {
-        line-height: 1.44;
+    gap: $gap;
+  }
 
-        color: $color-white;
-        @include md-min {
-            font-size: 18px;
-        }
+
+  &__title {
+    color: $color-active-regular;
+
+    font-weight: 500;
+
+    @include md-min {
+      font-size: 24px;
     }
+    @include md {
+      font-size: 18px;
+    }
+  }
+  &__description {
+    color: $color-white;
+
+    line-height: 1.44;
+
+    @include md-min {
+      font-size: 18px;
+    }
+  }
 }
