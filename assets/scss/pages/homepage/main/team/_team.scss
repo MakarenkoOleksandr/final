@@ -2,38 +2,93 @@
 @use "../../../../mixins" as *;
 
 .team {
-    padding-top: $gap-md;
+    padding-top: 60px;
     padding-bottom: $gap-md;
 
     &__container {
         @extend %container;
     }
-    &__grid {
-        display: grid;
-        grid-template-areas: ;
+    &__wrapper {
+        display: flex;
+        column-gap: $gap-md;
         background-color: $color-grey-bg;
         border-radius: 12px;
     }
     &__photo {
-        grid-area: photo;
     }
     &__photo-image {
     }
+
+    &__content {
+        padding-top: $gap-md;
+        &-photo {
+            position: absolute;
+            z-index: -9999;
+            opacity: 0;
+        }
+    }
     &__page-link {
-        grid-area: link;
     }
     &__page-url {
+        position: relative;
+        grid-area: link;
+        font-weight: 700;
+        font-size: 14px;
+
+        text-transform: uppercase;
+
+        color: $color-active-regular;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            right: -22px;
+            background-image: url(../img/page-home/main/team/team-url-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 15px;
+            height: 12px;
+        }
     }
     &__note {
+        padding-right: 30px;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 50px;
+        background: linear-gradient($color-gradient-red-text2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         grid-area: note;
+        padding-bottom: $gap;
+    }
+    &__names {
+        padding-bottom: 5px;
+        grid-area: names;
+        font-weight: 400;
+        font-size: 18px;
+
+        color: $color-grey-text;
     }
     &__name {
-        grid-area: name;
+        &-dekstop {
+        }
+        &-mobile {
+            position: absolute;
+            z-index: -9999;
+            opacity: 0;
+        }
     }
     &__rank {
+        font-weight: 400;
+
+        color: $color-grey-text;
         grid-area: rank;
     }
     &__indicators {
+        padding-top: $gap;
     }
     &__indicator {
     }

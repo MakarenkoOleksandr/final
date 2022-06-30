@@ -819,13 +819,80 @@ a {
 }
 
 .team {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
-.team__grid {
-  display: grid;
+.team__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
   background-color: #f5f5fa;
   border-radius: 12px;
+}
+.team__content {
+  padding-top: 40px;
+}
+.team__content-photo {
+  position: absolute;
+  z-index: -9999;
+  opacity: 0;
+}
+.team__page-url {
+  position: relative;
+  grid-area: link;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #24a3ff;
+}
+.team__page-url::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: -22px;
+  background-image: url(../img/page-home/main/team/team-url-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 12px;
+}
+.team__note {
+  padding-right: 30px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #f0145a), to(#ef8080));
+  background: -o-linear-gradient(left, #f0145a 1%, #ef8080 100%);
+  background: linear-gradient(90deg, #f0145a 1%, #ef8080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  grid-area: note;
+  padding-bottom: 20px;
+}
+.team__names {
+  padding-bottom: 5px;
+  grid-area: names;
+  font-weight: 400;
+  font-size: 18px;
+  color: #b3b3ba;
+}
+.team__name-mobile {
+  position: absolute;
+  z-index: -9999;
+  opacity: 0;
+}
+.team__rank {
+  font-weight: 400;
+  color: #b3b3ba;
+  grid-area: rank;
+}
+.team__indicators {
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   .actions__languages-active:hover {
