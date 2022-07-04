@@ -2,38 +2,47 @@
 @use "../../../../mixins" as *;
 
 .publications {
-}
-.publications__container {
-}
-.publications__page-link {
-}
-.publications__title {
-}
-.publications__grid {
-}
-.publications__item {
-}
-.item-value {
-}
-.publications__item-title {
-}
-.publications__item-date {
-}
-.publications__item-description {
-}
-.item-equity {
-}
-.publications__item-picture {
-}
-.publications__item-image {
-}
-.item-gdpr {
-}
-.item-zapovit {
-}
-.item__description {
-}
-.item-law {
-}
-.item-child {
+    padding-top: $gap-md;
+    &__container {
+        @extend %container;
+    }
+    &__page-link {
+        position: relative;
+        font-weight: 700;
+        font-size: 14px;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-active-regular;
+        &::after {
+            position: absolute;
+            right: -22px;
+            bottom: 2px;
+
+            width: 15px;
+            height: 12px;
+
+            content: "";
+
+            background-image: url(../img/page-home/main/publications/publications-url-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__title {
+    }
+    &__grid {
+    }
+    &__item {
+        &-title {
+        }
+        &-date {
+        }
+        &-description {
+        }
+        &-picture {
+        }
+        &-image {
+        }
+    }
 }

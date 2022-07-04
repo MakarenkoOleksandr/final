@@ -332,7 +332,7 @@ template {
   font-display: swap;
   src: url("../fonts/TTNorms-Medium.woff2") format("woff2");
 }
-.cases__container, .team__container, .services__container, .experience__container, .homepage-header__grid {
+.publications__container, .cases__container, .team__container, .services__container, .experience__container, .homepage-header__grid {
   max-width: 1360px;
   margin-right: auto;
   margin-left: auto;
@@ -896,12 +896,6 @@ a {
   border-radius: 12px;
   background-color: #f5f5fa;
 }
-.cases__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f5f5fa;
-}
 .cases__title {
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -980,6 +974,8 @@ a {
   display: grid;
 }
 .clients__card {
+  padding-left: 20px;
+  padding-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -989,6 +985,29 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.publications {
+  padding-top: 40px;
+}
+.publications__page-link {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24a3ff;
+}
+.publications__page-link::after {
+  position: absolute;
+  right: -22px;
+  bottom: 2px;
+  width: 15px;
+  height: 12px;
+  content: "";
+  background-image: url(../img/page-home/main/publications/publications-url-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @media (min-width: 768px) {
   .actions__languages-active:hover {
@@ -1035,23 +1054,24 @@ a {
     padding-top: 20px;
   }
   .cases__grid {
-    grid-template-areas: "title item-2 item-3" "item-1 item-2 item-3";
-    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr 2fr;
     grid-template-rows: auto 1fr;
+    grid-template-areas: "item-1 item-1 item-3 item-3 item-4" "item-2 item-2 item-3 item-3 item-4" "item-5 item-6 item-6 item-7 item-7";
   }
   .item-header {
-    grid-area: title;
-  }
-  .item-hillel {
     grid-area: item-1;
   }
-  .item-wannabiz {
+  .item-hillel {
     grid-area: item-2;
   }
-  .item-tapgerine {
+  .item-wannabiz {
     grid-area: item-3;
   }
+  .item-tapgerine {
+    grid-area: item-4;
+  }
   .item-3dlook {
+    grid-area: item-5;
     -webkit-box-flex: 1.7;
         -ms-flex-positive: 1.7;
             flex-grow: 1.7;
@@ -1059,6 +1079,7 @@ a {
         flex-basis: 0;
   }
   .item-adtelligent {
+    grid-area: item-6;
     -webkit-box-flex: 2.3;
         -ms-flex-positive: 2.3;
             flex-grow: 2.3;
@@ -1066,6 +1087,7 @@ a {
         flex-basis: 0;
   }
   .item-clikky {
+    grid-area: item-7;
     -webkit-box-flex: 3;
         -ms-flex-positive: 3;
             flex-grow: 3;
@@ -1350,16 +1372,16 @@ a {
   .team__indicators {
     padding-top: 15px;
   }
-  .cases__flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .cases__grid {
+    grid-auto-columns: repeat 1, 1fr;
   }
 }
 @media (max-width: 575.8px) {
   .services__grid {
     gap: 40px;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .clients__card-image {
+    width: 100%;
   }
 }

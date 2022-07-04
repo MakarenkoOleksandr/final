@@ -3,7 +3,6 @@
 
 .clients {
     &__container {
-        // @extend %container;
     }
     &__title {
         padding-bottom: 30px;
@@ -26,10 +25,15 @@
         }
     }
     &__card {
+        padding-left: $gap;
+        padding-right: $gap;
         display: flex;
         justify-content: center;
         align-items: center;
         &-image {
+            @include xs {
+                width: 100%;
+            }
         }
     }
 }
