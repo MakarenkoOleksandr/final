@@ -1,10 +1,6 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-a {
-  color: #ffffff;
-}
-
 .homepage-header {
   position: relative;
 
@@ -62,6 +58,9 @@ a {
       gap: $gap;
       grid-template-areas: "actions actions" "logo menu";
     }
+  }
+  &__grid > a {
+    color: $color-white;
   }
 
   &__button {

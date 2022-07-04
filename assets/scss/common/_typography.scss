@@ -45,5 +45,25 @@ a {
 }
 
 a:hover {
-  color: $color-accent;
+  color: $color-accent !important;
+  transition: 0.3s;
+}
+h2 {
+  background: linear-gradient($color-gradient-red-text2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  @include md-min {
+    font-size: 42px;
+  }
+  @include md {
+    font-size: 32px;
+  }
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+h3 {
+  color: $color-active-regular;
+  font-weight: 500;
 }

@@ -31,8 +31,7 @@
       text-align: right;
 
       font-size: 42px;
-    }
-    @include md-min {
+
       &::after {
         position: absolute;
         top: 0;
@@ -69,7 +68,9 @@
     &.active {
       background: linear-gradient($color-gradient-text);
       -webkit-background-clip: text;
-              background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
 
       @include md-min {
         &::after {
@@ -87,13 +88,12 @@
         }
       }
       @include md {
+        width: max-content;
         position: static;
         z-index: inherit;
 
         opacity: 1;
       }
-      -webkit-text-fill-color: transparent;
-              text-fill-color: transparent;
     }
   }
 
@@ -128,8 +128,8 @@
     }
     &-title {
       line-height: 1.43;
-
       @include md-min {
+        color: $color-white;
         font-size: 32px;
       }
       @include md {

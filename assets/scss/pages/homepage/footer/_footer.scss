@@ -2,122 +2,149 @@
 @use "../../../mixins" as *;
 
 .homepage-footer {
-    background-color: $color-grey-bg;
-    padding-bottom: $gap-md;
+  padding-bottom: $gap-md;
 
-    &__container {
-        @extend %container;
-        border-top: 4px solid $color-grey-separator;
+  background-color: $color-grey-bg;
+
+  &__container {
+    border-top: 4px solid $color-grey-separator;
+
+    @extend %container;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include md-min {
+      padding-top: 30px;
     }
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        @include md-min {
-            padding-top: 30px;
-        }
-        @include md {
-            padding-top: $gap;
-            flex-direction: column;
-            align-items: center;
-        }
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      padding-top: $gap;
     }
-    &__actions {
+  }
+
+  &__rights {
+    color: $color-grey-text;
+
+    @include md {
+      padding-top: $gap;
+
+      text-align: center;
     }
-    &__rights {
-        color: $color-grey-text;
-        @include md {
-            padding-top: $gap;
-        }
-    }
+  }
 }
 .footer-actions {
-    &__locations {
-        display: flex;
-        column-gap: 50px;
-        align-items: baseline;
-        padding-bottom: $gap;
-        @include md {
-            flex-direction: column;
-            align-items: center;
-            row-gap: $gap-sm;
-        }
-    }
-    &__location {
-        &-url {
-            position: relative;
-            font-weight: 500;
-            color: $color-main;
-            @include md-min {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 6px;
-                    right: -30px;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 3px;
-                    background-color: $color-grey-text;
-                }
-            }
-        }
-        &-map {
-            font-weight: 700;
-            font-size: 12px;
+  &__locations {
+    display: flex;
+    align-items: baseline;
 
-            letter-spacing: 1px;
-            text-transform: uppercase;
+    padding-bottom: $gap;
 
-            color: $color-active-regular;
-        }
-    }
-    &__contacts {
-        display: flex;
-        align-items: center;
-        column-gap: 25px;
-        @include md {
-            flex-direction: column;
-            row-gap: $gap;
-        }
-    }
-    &__contact {
-        &-fb {
-            position: relative;
-            @include md-min {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 17px;
-                    right: -15px;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 3px;
-                    background-color: $color-grey-text;
-                }
-            }
-        }
-        &-image {
-        }
-        &-phone {
-            position: relative;
-            font-weight: 700;
-            color: $color-main-alt;
-            @include md-min {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 6px;
-                    right: -16px;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 3px;
-                    background-color: $color-grey-text;
-                }
-            }
-        }
-        &-mail {
-            font-weight: 700;
+    column-gap: 50px;
+    @include md {
+      align-items: center;
+      flex-direction: column;
 
-            color: $color-active-regular;
-        }
+      row-gap: $gap-sm;
     }
+  }
+  &__location {
+    &-url {
+      position: relative;
+
+      color: $color-main;
+
+      font-weight: 500;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          top: 6px;
+          right: -30px;
+
+          width: 6px;
+          height: 6px;
+
+          content: "";
+
+          border-radius: 3px;
+          background-color: $color-grey-text;
+        }
+      }
+    }
+    &-map {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: $color-active-regular;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    column-gap: 25px;
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      row-gap: $gap;
+    }
+  }
+  &__contact {
+    &-fb {
+      position: relative;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          top: 17px;
+          right: -15px;
+
+          width: 6px;
+          height: 6px;
+
+          content: "";
+
+          border-radius: 3px;
+          background-color: $color-grey-text;
+        }
+      }
+    }
+
+    &-phone {
+      position: relative;
+
+      color: $color-main-alt;
+
+      font-weight: 700;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          top: 6px;
+          right: -16px;
+
+          width: 6px;
+          height: 6px;
+
+          content: "";
+
+          border-radius: 3px;
+          background-color: $color-grey-text;
+        }
+      }
+    }
+    &-mail {
+      color: $color-active-regular;
+
+      font-weight: 700;
+    }
+  }
 }

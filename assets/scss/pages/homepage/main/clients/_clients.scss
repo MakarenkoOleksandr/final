@@ -2,38 +2,37 @@
 @use "../../../../mixins" as *;
 
 .clients {
-    &__container {
-    }
-    &__title {
-        padding-bottom: 30px;
-        font-weight: 700;
-        font-size: 14px;
-        text-align: center;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+  &__title {
+    padding-bottom: 30px;
 
-        color: $color-main;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-main;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__grid {
+    display: grid;
+
+    @include md-min {
+      grid-template: repeat(3, 1fr) / repeat(4, 1fr);
     }
-    &__grid {
-        display: grid;
-        @include md-min {
-            grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-        }
-        @include md {
-            grid-template: repeat(6, 1fr) / repeat(2, 1fr);
-            grid-template-areas: "hilel wanna" "tap 3d" "eco cl" "or inf" "ult art" "city ad";
-        }
+    @include md {
+      grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+      grid-template-areas: "hilel wanna" "tap 3d" "eco cl" "or inf" "ult art" "city ad";
     }
-    &__card {
-        padding-left: $gap;
-        padding-right: $gap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &-image {
-            @include xs {
-                width: 100%;
-            }
-        }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: $gap;
+    padding-left: $gap;
+    &-image {
+      @include xs {
+        width: 100%;
+      }
     }
+  }
 }

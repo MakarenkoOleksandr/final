@@ -2,76 +2,76 @@
 @use "../../../../mixins" as *;
 
 .card {
-    &-hillel {
-        background-color: $clients-bg-1;
-        @include md {
-            grid-area: hilel;
-        }
+  &-hillel {
+    background-color: $clients-bg-1;
+    @include md {
+      grid-area: hilel;
     }
-    &-wannabiz {
-        background-color: $clients-bg-2;
-        @include md {
-            grid-area: wanna;
-        }
+  }
+  &-wannabiz {
+    background-color: $clients-bg-2;
+    @include md {
+      grid-area: wanna;
     }
-    &-tapgerine {
-        background-color: $clients-bg-3;
-        @include md {
-            grid-area: tap;
-        }
+  }
+  &-tapgerine {
+    background-color: $clients-bg-3;
+    @include md {
+      grid-area: tap;
     }
-    &-3dlook {
-        background-color: $clients-bg-4;
-        @include md {
-            grid-area: 3d;
-        }
+  }
+  &-3dlook {
+    background-color: $clients-bg-4;
+    @include md {
+      grid-area: 3d;
     }
-    &-orangear {
-        background-color: $clients-bg-5;
-        @include md {
-            grid-area: or;
-        }
+  }
+  &-orangear {
+    background-color: $clients-bg-5;
+    @include md {
+      grid-area: or;
     }
-    &-adtelligent {
-        background-color: $clients-bg-6;
-        @include md {
-            grid-area: ad;
-        }
+  }
+  &-adtelligent {
+    background-color: $clients-bg-6;
+    @include md {
+      grid-area: ad;
     }
-    &-clickky {
-        background-color: $clients-bg-7;
-        @include md {
-            grid-area: cl;
-        }
+  }
+  &-clickky {
+    background-color: $clients-bg-7;
+    @include md {
+      grid-area: cl;
     }
-    &-ecolease {
-        background-color: $clients-bg-8;
-        @include md {
-            grid-area: eco;
-        }
+  }
+  &-ecolease {
+    background-color: $clients-bg-8;
+    @include md {
+      grid-area: eco;
     }
-    &-infratek {
-        background-color: $clients-bg-9;
-        @include md {
-            grid-area: inf;
-        }
+  }
+  &-infratek {
+    background-color: $clients-bg-9;
+    @include md {
+      grid-area: inf;
     }
-    &-citypark {
-        background-color: $clients-bg-10;
-        @include md {
-            grid-area: city;
-        }
+  }
+  &-citypark {
+    background-color: $clients-bg-10;
+    @include md {
+      grid-area: city;
     }
-    &-artprint {
-        background-color: $clients-bg-11;
-        @include md {
-            grid-area: art;
-        }
+  }
+  &-artprint {
+    background-color: $clients-bg-11;
+    @include md {
+      grid-area: art;
     }
-    &-ultimate {
-        background-color: $color-black;
-        @include md {
-            grid-area: ult;
-        }
+  }
+  &-ultimate {
+    background-color: $color-black;
+    @include md {
+      grid-area: ult;
     }
+  }
 }

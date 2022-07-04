@@ -71,14 +71,7 @@
   }
 
   &__page-url {
-    position: relative;
-
-    text-transform: uppercase;
-
     color: $color-active-regular;
-
-    font-size: 14px;
-    font-weight: 700;
 
     grid-area: link;
     &::after {
@@ -96,28 +89,16 @@
       background-size: contain;
     }
   }
-  &__note {
+  &__title {
     padding-right: 30px;
-
-    background: linear-gradient($color-gradient-red-text2);
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    font-weight: 700;
 
     grid-area: note;
     @include md-min {
       padding-bottom: $gap;
-
-      font-size: 42px;
     }
     @include md {
       padding-bottom: $gap-sm;
-
-      font-size: 32px;
     }
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
   }
   &__names {
     color: $color-grey-text;

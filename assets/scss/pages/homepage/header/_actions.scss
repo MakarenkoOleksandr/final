@@ -59,6 +59,9 @@
       display: none;
     }
   }
+  &__languages > a {
+    color: $color-white;
+  }
 
   &__language-ru {
     @include sm {
@@ -98,11 +101,17 @@
       display: none;
     }
   }
+  &__locations > a {
+    color: $color-white;
+  }
 
   &__phones {
     position: relative;
 
     font-weight: 700;
+  }
+  &__phones > a {
+    color: $color-white;
   }
 
   &__phones::after {

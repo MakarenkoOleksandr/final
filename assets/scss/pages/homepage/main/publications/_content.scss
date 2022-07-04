@@ -2,34 +2,42 @@
 @use "../../../../mixins" as *;
 
 .publications {
-    &__content {
-        padding: $gap;
-        &-title > a {
-            font-weight: 500;
-            font-size: 18px;
+  &__content {
+    padding: $gap;
+    &-title > a {
+      padding-bottom: $gap-sm;
 
-            color: $color-active-regular;
-            padding-bottom: $gap-sm;
-        }
-        &-date {
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: $color-grey-text;
-            padding-top: $gap-sm;
-            @include xs-min {
-                padding-bottom: $gap;
-                border-bottom: 4px solid $color-grey-separator;
-            }
-        }
-        &-description {
-            padding-top: $gap;
-            line-height: 1.38;
-            @include xs {
-                display: none;
-            }
-        }
+      color: $color-active-regular;
+
+      font-size: 18px;
+      font-weight: 500;
     }
+    &-date {
+      padding-top: $gap-sm;
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: $color-grey-text;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+
+      @include xs-min {
+        padding-bottom: $gap;
+
+        border-bottom: 4px solid $color-grey-separator;
+      }
+    }
+    &-description {
+      padding-top: $gap;
+
+      line-height: 1.38;
+
+      @include xs {
+        display: none;
+      }
+    }
+  }
 }

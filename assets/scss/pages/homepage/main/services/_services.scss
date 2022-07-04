@@ -45,15 +45,9 @@
     background-color: $color-bg-services2;
   }
   &__page-link {
-    position: relative;
-
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
     opacity: 0.5;
     color: $color-white;
 
-    font-size: 14px;
     &::after {
       position: absolute;
       right: -18px;
@@ -70,22 +64,9 @@
     }
   }
   &__title {
-    background: linear-gradient($color-gradient-red-text);
-    -webkit-background-clip: text;
-            background-clip: text;
-
-    @include md-min {
-      padding-bottom: 70px;
-
-      font-size: 42px;
+    @include sm-min {
+      display: inline;
     }
-    @include md {
-      padding-bottom: $gap;
-
-      font-size: 32px;
-    }
-    -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
   }
   &__grid {
     display: grid;
@@ -94,6 +75,10 @@
       column-gap: $gap-md;
       grid-template-columns: repeat(3, 1fr);
       row-gap: 60px;
+      padding-top: 70px;
+    }
+    @include md {
+      padding-top: $gap;
     }
     @include md-xs {
       gap: $gap-md;
@@ -104,35 +89,39 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-}
-.service {
   &-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    @include xs-min {
+      grid-template-areas: "logo" "title" "des";
+    }
+    @include xs {
+      grid-template-areas: "logo title" "des des";
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
 
     gap: $gap;
-  }
-
-
-  &__title {
-    color: $color-active-regular;
-
-    font-weight: 500;
-
-    @include md-min {
-      font-size: 24px;
+    &__logo {
+      grid-area: logo;
     }
-    @include md {
-      font-size: 18px;
+    &__title {
+      grid-area: title;
+      @include md-min {
+        font-size: 24px;
+      }
+      @include md {
+        font-size: 18px;
+      }
     }
-  }
-  &__description {
-    color: $color-white;
+    &__description {
+      grid-area: des;
+      color: $color-white;
 
-    line-height: 1.44;
+      line-height: 1.44;
 
-    @include md-min {
-      font-size: 18px;
+      @include md-min {
+        font-size: 18px;
+      }
     }
   }
 }

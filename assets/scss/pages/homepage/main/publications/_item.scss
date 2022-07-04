@@ -2,24 +2,24 @@
 @use "../../../../mixins" as *;
 
 .item {
-    &-order1 {
-        @include xs {
-            order: -3;
-        }
+  &-order1 {
+    @include xs {
+      order: -3;
     }
-    &-order2 {
-        @include xs {
-            order: -2;
-        }
+  }
+  &-order2 {
+    @include xs {
+      order: -2;
     }
-    &-order3 {
-        @include xs {
-            order: -1;
-        }
+  }
+  &-order3 {
+    @include xs {
+      order: -1;
     }
-    &-hidden {
-        @include xs {
-            display: none;
-        }
+  }
+  &-hidden {
+    @include xs {
+      display: none;
     }
+  }
 }

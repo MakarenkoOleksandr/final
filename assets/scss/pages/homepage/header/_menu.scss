@@ -49,6 +49,9 @@
       }
     }
   }
+  &__item > a {
+    color: $color-white;
+  }
 
   &__link {
     font-size: 18px;
