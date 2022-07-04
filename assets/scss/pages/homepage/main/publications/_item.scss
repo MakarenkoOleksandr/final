@@ -2,16 +2,24 @@
 @use "../../../../mixins" as *;
 
 .item {
-    &-equity {
+    &-order1 {
+        @include xs {
+            order: -3;
+        }
     }
-    &-value {
+    &-order2 {
+        @include xs {
+            order: -2;
+        }
     }
-    &-gdpr {
+    &-order3 {
+        @include xs {
+            order: -1;
+        }
     }
-    &-zapovit {
-    }
-    &-law {
-    }
-    &-child {
+    &-hidden {
+        @include xs {
+            display: none;
+        }
     }
 }

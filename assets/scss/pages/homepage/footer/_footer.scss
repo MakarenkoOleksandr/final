@@ -1,0 +1,123 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.homepage-footer {
+    background-color: $color-grey-bg;
+    padding-bottom: $gap-md;
+
+    &__container {
+        @extend %container;
+        border-top: 4px solid $color-grey-separator;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include md-min {
+            padding-top: 30px;
+        }
+        @include md {
+            padding-top: $gap;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__actions {
+    }
+    &__rights {
+        color: $color-grey-text;
+        @include md {
+            padding-top: $gap;
+        }
+    }
+}
+.footer-actions {
+    &__locations {
+        display: flex;
+        column-gap: 50px;
+        align-items: baseline;
+        padding-bottom: $gap;
+        @include md {
+            flex-direction: column;
+            align-items: center;
+            row-gap: $gap-sm;
+        }
+    }
+    &__location {
+        &-url {
+            position: relative;
+            font-weight: 500;
+            color: $color-main;
+            @include md-min {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    right: -30px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 3px;
+                    background-color: $color-grey-text;
+                }
+            }
+        }
+        &-map {
+            font-weight: 700;
+            font-size: 12px;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            color: $color-active-regular;
+        }
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+        @include md {
+            flex-direction: column;
+            row-gap: $gap;
+        }
+    }
+    &__contact {
+        &-fb {
+            position: relative;
+            @include md-min {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 17px;
+                    right: -15px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 3px;
+                    background-color: $color-grey-text;
+                }
+            }
+        }
+        &-image {
+        }
+        &-phone {
+            position: relative;
+            font-weight: 700;
+            color: $color-main-alt;
+            @include md-min {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    right: -16px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 3px;
+                    background-color: $color-grey-text;
+                }
+            }
+        }
+        &-mail {
+            font-weight: 700;
+
+            color: $color-active-regular;
+        }
+    }
+}

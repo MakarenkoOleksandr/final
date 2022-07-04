@@ -101,7 +101,7 @@
 
     background: linear-gradient($color-gradient-red-text2);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     font-weight: 700;
 
@@ -117,7 +117,7 @@
       font-size: 32px;
     }
     -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
+    text-fill-color: transparent;
   }
   &__names {
     color: $color-grey-text;
