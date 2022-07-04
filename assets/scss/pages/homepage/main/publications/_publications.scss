@@ -128,4 +128,8 @@
       margin-top: $gap;
     }
   }
+  &__button:hover {
+    background-color: $color-active-hover;
+    transition: 0.3s;
+  }
 }

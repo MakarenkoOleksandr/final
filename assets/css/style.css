@@ -369,8 +369,17 @@ template {
   opacity: 0.2;
   border-radius: 8px;
   background-color: #24a3ff;
+  cursor: pointer;
 }
 .indicator.active {
+  opacity: 1;
+}
+
+.indicator:hover {
+  background-color: #24a3ff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   opacity: 1;
 }
 
@@ -1055,6 +1064,12 @@ h3 {
           box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
   font-size: 14px;
   font-weight: 700;
+}
+.publications__button:hover {
+  background-color: #0085ff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .publications__content {

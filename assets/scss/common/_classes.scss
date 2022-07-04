@@ -18,10 +18,15 @@
   opacity: 0.2;
   border-radius: 8px;
   background-color: $color-active-regular;
-
+  cursor: pointer;
   &.active {
     opacity: 1;
   }
+}
+.indicator:hover {
+  background-color: $color-active-regular;
+  transition: 0.3s;
+  opacity: 1;
 }
 
 .link {
