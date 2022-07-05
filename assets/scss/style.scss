@@ -7,3 +7,6 @@
 @use "pages/homepage/header";
 @use "pages/homepage/main" as *;
 @use "pages/homepage/footer";
+
+@use "pages/aboutpage/page-header";
+@use "pages/aboutpage/page-main" as *;
