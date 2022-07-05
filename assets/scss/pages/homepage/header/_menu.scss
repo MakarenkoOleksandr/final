@@ -1,5 +1,6 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+
 .homepage-header {
   &__image {
     grid-area: logo;

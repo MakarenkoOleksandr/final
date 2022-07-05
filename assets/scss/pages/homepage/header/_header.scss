@@ -4,8 +4,6 @@
 .homepage-header {
   position: relative;
 
-  min-height: 100vh;
-
   background: linear-gradient($color-gradient-soft);
 
   &::after {
@@ -46,6 +44,19 @@
     justify-content: space-between;
 
     @extend %container;
+    @include sm-min {
+      padding-top: 50px;
+
+      gap: $gap;
+      grid-template-areas: "logo actions" "logo menu";
+    }
+    @include sm {
+      padding-top: $gap;
+
+      gap: $gap;
+      grid-template-areas: "actions actions" "logo menu";
+    }
+
     @include sm-min {
       padding-top: 50px;
 

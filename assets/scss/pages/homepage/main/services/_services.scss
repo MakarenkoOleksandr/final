@@ -113,6 +113,10 @@
         font-size: 18px;
       }
     }
+    &__title > a {
+      color: $color-active-regular;
+      font-weight: 500;
+    }
     &__description {
       grid-area: des;
       color: $color-white;

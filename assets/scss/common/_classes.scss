@@ -1,10 +1,6 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
-.hero {
-  font-size: 42px;
-  line-height: 50px;
-}
 .indicators {
   display: flex;
   justify-content: center;
