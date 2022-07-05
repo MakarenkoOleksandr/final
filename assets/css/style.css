@@ -1423,11 +1423,12 @@ h2 {
 }
 
 .photo {
-  min-height: 440px;
+  max-height: 440px;
   background-image: url(../img/about-page/main/team.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-bottom: 80px;
 }
 .photo__header {
   min-height: 440px;
@@ -1445,6 +1446,8 @@ h2 {
           justify-content: center;
   background: none;
   -webkit-text-fill-color: unset;
+}
+.photo__link {
   font-size: 96px;
   text-transform: uppercase;
   color: #ffffff;
@@ -1754,7 +1757,7 @@ h2 {
     height: 100%;
     background-color: #e6e6f0;
   }
-  .photo__header {
+  .photo__link {
     letter-spacing: 63px;
   }
 }
@@ -1926,7 +1929,7 @@ h2 {
   .aboutpage-header__content {
     top: 100px;
   }
-  .photo__header {
+  .photo__link {
     letter-spacing: 40px;
     font-size: 48px;
   }
@@ -2154,7 +2157,7 @@ h2 {
   .aboutpage-header__content {
     top: 140px;
   }
-  .photo__header {
+  .photo__link {
     letter-spacing: 20px;
     font-size: 36px;
   }

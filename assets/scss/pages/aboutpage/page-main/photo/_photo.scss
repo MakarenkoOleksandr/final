@@ -2,11 +2,12 @@
 @use "../../../../mixins" as *;
 
 .photo {
-    min-height: 440px;
+    max-height: 440px;
     background-image: url(../img/about-page/main/team.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 80px;
     &__container {
         @extend %container;
     }
@@ -17,9 +18,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         background: none;
         -webkit-text-fill-color: unset;
+    }
+    &__link {
         font-size: 96px;
 
         text-transform: uppercase;
