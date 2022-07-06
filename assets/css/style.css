@@ -453,6 +453,10 @@ h2 {
   border-bottom: 2px solid #f0145a;
 }
 
+.hover:hover {
+  opacity: 0.5;
+}
+
 .header-grid {
   display: grid;
   -webkit-box-align: center;
@@ -1074,6 +1078,7 @@ h2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  cursor: pointer;
   padding: 20px;
   border: 1px solid #ffffff;
 }
@@ -1135,6 +1140,7 @@ h2 {
   display: grid;
 }
 .clients__card {
+  max-height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1418,6 +1424,7 @@ h2 {
   padding: 1em;
   border-radius: 12px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .destinations__item-image {
   width: 100%;
@@ -2147,9 +2154,6 @@ h2 {
             align-items: center;
     grid-template-areas: "logo title" "des des";
     grid-template-columns: auto 1fr;
-  }
-  .clients__card-image {
-    width: 100%;
   }
   .publications {
     padding-top: 20px;

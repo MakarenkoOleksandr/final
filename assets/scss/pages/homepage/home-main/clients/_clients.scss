@@ -25,16 +25,12 @@
     }
   }
   &__card {
+    max-height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     padding-right: $gap;
     padding-left: $gap;
-    &-image {
-      @include xs {
-        width: 100%;
-      }
-    }
   }
 }
