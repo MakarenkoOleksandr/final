@@ -4,9 +4,11 @@
 @use "presets";
 @use "mixins";
 
-@use "pages/homepage/header";
-@use "pages/homepage/main" as *;
-@use "pages/homepage/footer";
+@use "pages/header";
+@use "pages/homepage/home-header";
+@use "pages/homepage/home-main";
 
-@use "pages/aboutpage/page-header";
-@use "pages/aboutpage/page-main" as *;
+@use "pages/aboutpage/about-header";
+@use "pages/aboutpage/about-main" as *;
+
+@use "pages/footer";

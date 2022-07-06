@@ -1,0 +1,161 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.slider {
+  display: flex;
+
+  column-gap: 80px;
+  @include md-min {
+    align-items: center;
+  }
+  @include md {
+    flex-direction: column;
+
+    row-gap: $gap-sm;
+  }
+
+  &__headers {
+    position: relative;
+
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 2;
+    flex-shrink: 0;
+
+    color: $color-grey-text;
+
+    font-weight: 700;
+
+    @include md-min {
+      text-align: right;
+
+      font-size: 42px;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: -42px;
+
+        width: 4px;
+        height: 100%;
+
+        content: "";
+
+        background-color: $color-grey-separator;
+      }
+    }
+    row-gap: $gap;
+  }
+
+  &__header {
+    position: relative;
+
+    user-select: none;
+
+    @include md {
+      position: absolute;
+      z-index: -9999;
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      opacity: 0;
+
+      font-size: 14px;
+    }
+
+    &.active {
+      background: linear-gradient($color-gradient-text);
+      -webkit-background-clip: text;
+              background-clip: text;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: -42px;
+
+          width: 4px;
+          height: 100%;
+
+          content: "";
+
+          background-color: $color-accent;
+        }
+      }
+      @include md {
+        position: static;
+        z-index: inherit;
+
+        width: max-content;
+
+        opacity: 1;
+      }
+      -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
+    }
+  }
+
+  &__notes {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 3;
+    flex-shrink: 0;
+
+    min-height: max-content;
+
+    color: $color-white;
+  }
+  &__note {
+    &-item {
+      position: absolute;
+      z-index: -9999;
+
+      display: flex;
+      flex-direction: column;
+
+      opacity: 0;
+
+      row-gap: $gap;
+
+      &.active {
+        position: static;
+        z-index: inherit;
+
+        opacity: 1;
+      }
+    }
+    &-title {
+      line-height: 1.43;
+
+      @include md-min {
+        color: $color-white;
+
+        font-size: 32px;
+      }
+      @include md {
+        font-size: 22px;
+      }
+    }
+    &-description {
+      line-height: 1.43;
+
+      @include md-min {
+        font-size: 21px;
+      }
+      @include md {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__indicators {
+    margin-top: $gap-md;
+
+    @include md-min {
+      display: none;
+    }
+  }
+}

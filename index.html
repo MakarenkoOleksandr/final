@@ -11,53 +11,54 @@
 
 <body>
   <header class="homepage-header">
-    <div class="homepage-header__grid">
-      <div class="homepage-header__image">
-        <img class="homepage-header__logo" src="assets/img/page-home/header/header-menu-hlegals-logo.svg"
-          alt="Site logo">
+    <div class="homepage-header__grid header-grid">
+      <div class="header-grid__image">
+        <img class="header-grid__logo" src="
+          assets/img/page-home/header/header-menu-hlegals-logo.svg" alt="Site logo">
       </div>
 
-      <div class="homepage-header__actions actions">
-        <div class="actions__languages">
-          <a class="actions__language-ua actions__languages-active" href="">УК</a>
-          <a class="actions__language-ru" href="">РУ</a>
-          <a class="actions__language-en" href="">EN</a>
+      <div class="homepage-header__actions actions-white header-grid__actions">
+        <div class="actions-white__languages">
+          <a class="actions-white__language-ua actions-white__languages-active" href="">УК</a>
+          <a class="actions-white__language-ru" href="">РУ</a>
+          <a class="actions-white__language-en" href="">EN</a>
         </div>
-        <div class="actions__locations">
-          <a class="actions__location-url" href="">Одеса, Адміральський пр., 3</a>
+        <div class="actions-white__locations">
+          <a class="actions-white__location-url" href="">Одеса, Адміральський пр., 3</a>
         </div>
-        <div class="actions__phones">
-          <a class="actions__phone-url" href="tel:+380503901591">+38 (050) 390 15 91</a>
+        <div class="actions-white__phones">
+          <a class="actions-white__phone-url" href="tel:+380503901591">+38 (050) 390 15 91</a>
         </div>
-        <div class="actions__socials">
-          <a class="actions__social-url" href="">
-            <img class="actions__social-img" src="assets/img/page-home/header/header-menu-fb-logo.svg" alt="FB logo">
+        <div class="actions-white__socials">
+          <a class="actions-white__social-url" href="">
+            <img class="actions-white__social-img" src="assets/img/page-home/header/header-menu-fb-logo.svg"
+              alt="FB logo">
           </a>
         </div>
       </div>
 
-      <nav class="homepage-header__menu menu">
-        <div class="menu__hamburger">
-          <span class="menu__hamburger-row"></span>
-          <span class="menu__hamburger-row"></span>
-          <span class="menu__hamburger-row"></span>
+      <nav class="homepage-header__menu header-grid__menu menu-white ">
+        <div class="menu-white__hamburger">
+          <span class="menu-white__hamburger-row"></span>
+          <span class="menu-white__hamburger-row"></span>
+          <span class="menu-white__hamburger-row"></span>
         </div>
 
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" target="_blank" href="about.html">про нас</a>
+        <ul class="menu-white__list">
+          <li class="menu-white__item">
+            <a class="menu-white__link" target="_blank" href="about.html">про нас</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#serv">послуги</a>
+          <li class="menu-white__item">
+            <a class="menu-white__link" href="#serv">послуги</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#team">команда</a>
+          <li class="menu-white__item">
+            <a class="menu-white__link" href="#team">команда</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#pub">публікації</a>
+          <li class="menu-white__item">
+            <a class="menu-white__link" href="#pub">публікації</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#con">контакти</a>
+          <li class="menu-white__item">
+            <a class="menu-white__link" href="#con">контакти</a>
           </li>
         </ul>
       </nav>
@@ -79,7 +80,7 @@
   </header>
 
   <main class="homepage-main">
-    <a name="exp"></a>
+    <a id="exp"></a>
     <section class="experience">
       <div class="experience__container">
 
@@ -130,7 +131,6 @@
       </div>
     </section>
 
-    <a name="serv"></a>
     <section class="services">
       <div class="services__container">
         <div><strong><a class="services__page-link link" href="">послуги</a></strong></div>
@@ -213,7 +213,6 @@
       </div>
     </section>
 
-    <a name="team"></a>
     <section class="team">
       <div class="team__container">
         <div class="team__wrapper">
@@ -375,7 +374,6 @@
       </div>
     </section>
 
-    <a name="pub"></a>
     <section class="publications">
       <div class="publications__container">
         <div><strong><a class="publications__page-link link" href="">Публікації</a></strong></div>
@@ -477,7 +475,6 @@
     </section>
   </main>
 
-  <a name="con"></a>
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__wrapper">
@@ -488,11 +485,17 @@
           </div>
 
           <div class="footer-actions__contacts">
-            <a class="footer-actions__contact-fb" href="">
-              <img class="footer-actions__contact-image" src="assets/img/page-home/footer/fb-logo.svg" alt="">
-            </a>
-            <a class="footer-actions__contact-phone" href="tel:+380503901591"> +38 (050) 390 15 91</a>
-            <a class="footer-actions__contact-mail" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+            <div class="footer-actions__contacts-socials">
+              <a class="footer-actions__contacts-social" href="">
+                <img class="footer-actions__contact-image" src="assets/img/page-home/footer/fb-logo.svg" alt="logo">
+              </a>
+            </div>
+            <div class="footer-actions__contacts-phones">
+              <a class="footer-actions__contacts-phone" href="tel:+380503901591"> +38 (050) 390 15 91</a>
+            </div>
+            <div class="footer-actions__contacts-mails">
+              <a class="footer-actions__contacts-mail" href="mailto:contact@hlegals.net">contact@hlegals.net</a>
+            </div>
           </div>
         </div>
         <div class="page-footer__rights">© 2021 ТОВ Юридична компанія «HLEGALS»</div>

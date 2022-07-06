@@ -1,0 +1,38 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.page-footer {
+  padding-bottom: $gap-md;
+
+  background-color: $color-grey-bg;
+
+  &__container {
+    @extend %container;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 4px solid $color-grey-separator;
+
+    @include md-min {
+      padding-top: 30px;
+    }
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      padding-top: $gap;
+    }
+  }
+
+  &__rights {
+    color: $color-grey-text;
+
+    @include md {
+      padding-top: $gap;
+
+      text-align: center;
+    }
+  }
+}

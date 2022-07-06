@@ -1,0 +1,132 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.actions-grey {
+  display: flex;
+  align-items: center;
+
+  column-gap: 25px;
+  grid-area: actions;
+  @include sm {
+    justify-content: space-between;
+  }
+
+  &__languages {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 4px;
+
+    letter-spacing: 1px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    column-gap: $gap-sm;
+
+    &-active {
+      align-self: center;
+
+      margin-right: -5px;
+      padding: 5px;
+
+      border-radius: 8px;
+      background: $color-accent;
+    }
+    &-active:hover {
+      @include sm-min {
+        color: $color-white;
+      }
+    }
+    &::after {
+      position: absolute;
+      top: 12px;
+      right: -16px;
+
+      width: 6px;
+      height: 6px;
+
+      content: "";
+
+      border-radius: 6px;
+      background-color: $color-grey-separator;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  &__languages > a {
+    color: $color-grey-text;
+  }
+
+  &__language-ua {
+    color: $color-white !important;
+  }
+
+  &__locations {
+    position: relative;
+
+    font-weight: 400;
+
+    @include sm {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: -16px;
+
+      width: 6px;
+      height: 6px;
+
+      content: "";
+
+      border-radius: 6px;
+      background-color: $color-grey-separator;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  &__locations > a {
+    color: $color-grey-text;
+  }
+
+  &__phones {
+    position: relative;
+
+    font-weight: 700;
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: -16px;
+
+      width: 6px;
+      height: 6px;
+
+      content: "";
+
+      border-radius: 6px;
+      background-color: $color-grey-separator;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+  &__phones > a {
+    color: $color-grey-text;
+  }
+
+  &__socials {
+    @include sm {
+      display: none;
+    }
+  }
+}

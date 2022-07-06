@@ -1,0 +1,143 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.aboutpage-header {
+  &__wrapper {
+    display: grid;
+    align-items: baseline;
+
+    @include md-min {
+      column-gap: $gap-md;
+      grid-template-areas: "title stat" "des stat";
+      grid-template-columns: 640px auto;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: $gap;
+    padding-left: $gap;
+
+    @include md-xs {
+      top: 100px;
+    }
+    @include xs {
+      top: 140px;
+    }
+    &-title {
+      margin: 0;
+      padding-bottom: $gap;
+
+      background: linear-gradient($color-gradient-red-text2);
+      -webkit-background-clip: text;
+              background-clip: text;
+
+      @include md-min {
+        font-size: 42px;
+
+        grid-area: title;
+      }
+      @include md {
+        font-size: 32px;
+      }
+      -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
+    }
+    &-description {
+      padding-right: $gap;
+
+      line-height: 1.43;
+
+      @include md-min {
+        font-size: 21px;
+
+        grid-area: des;
+      }
+      @include md {
+        font-size: 18px;
+      }
+    }
+    &-statistic {
+      @include md-min {
+        grid-area: stat;
+      }
+    }
+  }
+}
+.statistic {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 380px;
+
+  @include md-min {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: -20px;
+
+      width: 4px;
+      height: 100%;
+
+      content: "";
+
+      background-color: $color-grey-separator;
+    }
+  }
+  @include md {
+    margin-top: $gap-md;
+    &::after {
+      position: absolute;
+      top: -20px;
+
+      width: 100%;
+      height: 4px;
+
+      content: "";
+
+      background-color: $color-grey-separator;
+    }
+  }
+  row-gap: $gap;
+  &-item {
+    display: grid;
+    align-items: center;
+
+    column-gap: $gap-sm;
+    grid-template-areas: "logo val" "des des";
+    grid-template-columns: 25px auto;
+    &__image {
+      display: flex;
+      align-items: center;
+
+      grid-area: logo;
+    }
+
+    &__value {
+      width: max-content;
+
+      background: linear-gradient($color-gradient-red-text2);
+      -webkit-background-clip: text;
+              background-clip: text;
+
+      font-size: 36px;
+      font-weight: 700;
+
+      grid-area: val;
+      -webkit-text-fill-color: transparent;
+              text-fill-color: transparent;
+    }
+    &__description {
+      color: $color-main;
+
+      font-size: 18px;
+      font-weight: 400;
+
+      grid-area: des;
+    }
+  }
+}

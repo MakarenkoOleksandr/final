@@ -1,6 +1,6 @@
 // управление меню
-const menuBtn = document.querySelector('.menu__hamburger, .header-menu__hamburger')
-const menuList = document.querySelector('.menu__list, .header-menu__list')
+const menuBtn = document.querySelector('.menu-white__hamburger, .menu-grey__hamburger')
+const menuList = document.querySelector('.menu-white__list, .menu-grey__list')
 const body = document.querySelector('body')
 
 menuBtn.addEventListener('click', (e) => {

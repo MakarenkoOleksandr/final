@@ -1,0 +1,114 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-actions {
+  &__locations {
+    position: relative;
+
+    display: flex;
+    align-items: baseline;
+
+    padding-bottom: $gap;
+
+    column-gap: 50px;
+    @include md-min {
+      &::after {
+        position: absolute;
+        top: 6px;
+        left: 235px;
+
+        width: 6px;
+        height: 6px;
+
+        content: "";
+
+        border-radius: 3px;
+        background-color: $color-grey-text;
+      }
+    }
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      row-gap: $gap-sm;
+    }
+  }
+  &__location {
+    &-url {
+      color: $color-main;
+
+      font-weight: 500;
+    }
+    &-map {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: $color-active-regular;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    column-gap: 25px;
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      row-gap: $gap;
+    }
+    &-socials {
+      position: relative;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          top: 17px;
+          right: -17px;
+
+          width: 6px;
+          height: 6px;
+
+          content: "";
+
+          border-radius: 3px;
+          background-color: $color-grey-text;
+        }
+      }
+    }
+
+    &-phones {
+      position: relative;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          top: 6px;
+          right: -17px;
+
+          width: 6px;
+          height: 6px;
+
+          content: "";
+
+          border-radius: 3px;
+          background-color: $color-grey-text;
+        }
+      }
+    }
+
+    &-phone {
+      color: $color-main-alt;
+
+      font-weight: 700;
+    }
+    &-mail {
+      color: $color-active-regular;
+
+      font-weight: 700;
+    }
+  }
+}

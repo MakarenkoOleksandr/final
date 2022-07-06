@@ -26,7 +26,7 @@ body {
 
     &::before {
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       top: 0;
       left: 0;
 
@@ -45,14 +45,17 @@ a {
 }
 
 a:hover {
-  color: $color-accent !important;
   transition: 0.3s;
+
+  color: $color-accent !important;
 }
 h2 {
   background: linear-gradient($color-gradient-red-text2);
   -webkit-background-clip: text;
   background-clip: text;
+
   font-weight: 700;
+
   @include md-min {
     font-size: 42px;
   }
@@ -61,12 +64,4 @@ h2 {
   }
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-}
-
-h3 {
-  text-align: center;
-  text-transform: uppercase;
-  color: $color-main;
-  font-size: 14px;
-  font-weight: 700;
 }
