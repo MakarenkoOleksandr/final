@@ -7,7 +7,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-bottom: 80px;
+    @include xs-min {
+        margin-bottom: 80px;
+    }
+    @include xs {
+        margin-bottom: $gap;
+    }
     &__container {
         @extend %container;
     }

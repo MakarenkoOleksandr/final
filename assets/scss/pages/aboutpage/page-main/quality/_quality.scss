@@ -1,0 +1,46 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.quality {
+    @include xs-min {
+        padding-bottom: 95px;
+    }
+    @include xs {
+        padding-bottom: $gap-md;
+    }
+    &__wrapper {
+        @extend %container;
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        display: grid;
+        @include md-min {
+            grid-template-columns: 640px auto;
+            grid-template-areas: "des title";
+            column-gap: $gap-md;
+        }
+        @include md {
+            grid-template-areas: "des" "title";
+            row-gap: $gap;
+        }
+        &-title {
+            grid-area: title;
+            @include md-min {
+                max-width: 380px;
+            }
+        }
+        &-description {
+            line-height: 1.43;
+
+            color: $color-black;
+            grid-area: des;
+            @include md-min {
+                font-size: 21px;
+            }
+            @include md {
+                font-size: 18px;
+            }
+        }
+    }
+}

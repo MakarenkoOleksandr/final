@@ -4,12 +4,6 @@
 .clients {
   &__title {
     padding-bottom: 30px;
-
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-main;
-    font-size: 14px;
-    font-weight: 700;
   }
   &__grid {
     display: grid;

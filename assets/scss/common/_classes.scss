@@ -36,3 +36,11 @@
   color: $color-accent !important;
   border-bottom: 2px solid $color-accent;
 }
+.indicator-hide {
+  @include xs-min {
+    display: none;
+  }
+  @include xs {
+    display: block;
+  }
+}

@@ -62,3 +62,11 @@ h2 {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 }
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-main;
+  font-size: 14px;
+  font-weight: 700;
+}
