@@ -963,9 +963,9 @@ h2 {
 }
 .services-item {
   display: grid;
+  gap: 20px;
   grid-template-rows: repeat(3, -webkit-max-content);
   grid-template-rows: repeat(3, max-content);
-  gap: 20px;
 }
 .services-item__logo {
   grid-area: logo;

@@ -50,9 +50,9 @@ a:hover {
   color: $color-accent;
 }
 h2 {
-  @extend %text-liner-gradient-red;
   font-weight: 700;
 
+  @extend %text-liner-gradient-red;
   @include md-min {
     font-size: 42px;
   }

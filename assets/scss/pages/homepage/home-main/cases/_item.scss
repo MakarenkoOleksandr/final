@@ -2,48 +2,48 @@
 @use "../../../../mixins" as *;
 
 .item {
-    &-header {
-        @include sm-min {
-            grid-area: item-1;
-        }
+  &-header {
+    @include sm-min {
+      grid-area: item-1;
     }
-    &-hillel {
-        @include sm-min {
-            grid-area: item-2;
-        }
+  }
+  &-hillel {
+    @include sm-min {
+      grid-area: item-2;
     }
-    &-wannabiz {
-        @include sm-min {
-            grid-area: item-3;
-        }
+  }
+  &-wannabiz {
+    @include sm-min {
+      grid-area: item-3;
     }
-    &-tapgerine {
-        @include sm-min {
-            grid-area: item-4;
-        }
+  }
+  &-tapgerine {
+    @include sm-min {
+      grid-area: item-4;
     }
-    &-3dlook {
-        @include sm-min {
-            flex-basis: 0;
-            flex-grow: 1.7;
+  }
+  &-3dlook {
+    @include sm-min {
+      flex-basis: 0;
+      flex-grow: 1.7;
 
-            grid-area: item-5;
-        }
+      grid-area: item-5;
     }
-    &-adtelligent {
-        @include sm-min {
-            flex-basis: 0;
-            flex-grow: 2.3;
+  }
+  &-adtelligent {
+    @include sm-min {
+      flex-basis: 0;
+      flex-grow: 2.3;
 
-            grid-area: item-6;
-        }
+      grid-area: item-6;
     }
-    &-clikky {
-        @include sm-min {
-            flex-basis: 0;
-            flex-grow: 3;
+  }
+  &-clikky {
+    @include sm-min {
+      flex-basis: 0;
+      flex-grow: 3;
 
-            grid-area: item-7;
-        }
+      grid-area: item-7;
     }
+  }
 }

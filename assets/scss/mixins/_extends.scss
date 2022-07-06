@@ -11,5 +11,6 @@
 %text-liner-gradient-red {
   background: linear-gradient($color-gradient-red-text2);
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
