@@ -47,13 +47,10 @@ a {
 a:hover {
   transition: 0.3s;
 
-  color: $color-accent !important;
+  color: $color-accent;
 }
 h2 {
-  background: linear-gradient($color-gradient-red-text2);
-  -webkit-background-clip: text;
-  background-clip: text;
-
+  @extend %text-liner-gradient-red;
   font-weight: 700;
 
   @include md-min {
@@ -62,6 +59,4 @@ h2 {
   @include md {
     font-size: 32px;
   }
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }

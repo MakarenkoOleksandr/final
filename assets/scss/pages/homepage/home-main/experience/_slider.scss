@@ -66,10 +66,7 @@
     }
 
     &.active {
-      background: linear-gradient($color-gradient-text);
-      -webkit-background-clip: text;
-              background-clip: text;
-
+      @extend %text-liner-gradient-red;
       @include md-min {
         &::after {
           position: absolute;
@@ -93,8 +90,6 @@
 
         opacity: 1;
       }
-      -webkit-text-fill-color: transparent;
-              text-fill-color: transparent;
     }
   }
 

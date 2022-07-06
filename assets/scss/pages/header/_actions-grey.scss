@@ -59,12 +59,16 @@
     }
   }
 
-  &__languages > a {
-    color: $color-grey-text;
-  }
-
-  &__language-ua {
-    color: $color-white !important;
+  &__language {
+    &-ua {
+      color: $color-white !important;
+    }
+    &-ru {
+      color: $color-grey-text;
+    }
+    &-en {
+      color: $color-grey-text;
+    }
   }
 
   &__locations {
@@ -94,11 +98,13 @@
     }
   }
 
-  &__locations > a {
-    color: $color-grey-text;
+  &__location {
+    &-url {
+      color: $color-grey-text;
+    }
   }
 
-  &__phones {
+  &__phone {
     position: relative;
 
     font-weight: 700;
@@ -119,9 +125,10 @@
         display: none;
       }
     }
-  }
-  &__phones > a {
-    color: $color-grey-text;
+    &-url {
+      color: $color-grey-text;
+      font-weight: 700;
+    }
   }
 
   &__socials {

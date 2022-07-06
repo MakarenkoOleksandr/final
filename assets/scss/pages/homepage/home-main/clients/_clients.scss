@@ -21,7 +21,7 @@
     }
     @include md {
       grid-template: repeat(6, 1fr) / repeat(2, 1fr);
-      grid-template-areas: "hilel wanna" "tap 3d" "eco cl" "or inf" "ult art" "city ad";
+      grid-template-areas: "hilel wanna" "tap look" "eco cl" "or inf" "ult art" "city ad";
     }
   }
   &__card {

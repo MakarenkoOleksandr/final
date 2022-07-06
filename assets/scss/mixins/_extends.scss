@@ -7,3 +7,9 @@
   padding-right: 20px;
   padding-left: 20px;
 }
+
+%text-liner-gradient-red {
+  background: linear-gradient($color-gradient-red-text2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
