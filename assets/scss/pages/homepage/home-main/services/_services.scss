@@ -10,9 +10,7 @@
   @include md-min {
     padding-bottom: 80px;
   }
-  @include md {
-    padding-bottom: $gap;
-  }
+
   &__container {
     @extend %container;
   }

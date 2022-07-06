@@ -1079,6 +1079,7 @@ h2 {
 }
 .cases__item-title {
   color: #686887;
+  font-weight: 500;
 }
 .cases__item-link {
   color: #b3b3ba;
@@ -1840,9 +1841,6 @@ h2 {
   }
   .slider__note-description {
     font-size: 18px;
-  }
-  .services {
-    padding-bottom: 20px;
   }
   .services__grid {
     padding-top: 20px;
