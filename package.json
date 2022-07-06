@@ -18,7 +18,6 @@
     "sort-css-media-queries": "^2.0.4"
   },
   "dependencies": {
-    "favicon": "^0.0.2",
     "jquery": "^3.6.0",
     "masonry-layout": "^4.2.2",
     "normalize.css": "^8.0.1"
