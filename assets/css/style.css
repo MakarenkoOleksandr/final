@@ -1078,8 +1078,8 @@ h2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  cursor: pointer;
   padding: 20px;
+  cursor: pointer;
   border: 1px solid #ffffff;
 }
 .cases__item-title {
@@ -1140,7 +1140,6 @@ h2 {
   display: grid;
 }
 .clients__card {
-  max-height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1150,6 +1149,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-height: 120px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -1424,7 +1424,6 @@ h2 {
   padding: 1em;
   border-radius: 12px;
   background-color: #ffffff;
-  cursor: pointer;
 }
 .destinations__item-image {
   width: 100%;
