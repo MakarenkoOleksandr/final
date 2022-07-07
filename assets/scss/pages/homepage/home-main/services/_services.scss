@@ -77,14 +77,13 @@
       row-gap: 60px;
     }
     @include md {
+      gap: $gap;
       padding-top: $gap;
     }
     @include md-xs {
-      gap: $gap-md;
       grid-template-columns: repeat(2, 1fr);
     }
     @include xs {
-      gap: $gap-md;
       grid-template-columns: repeat(1, 1fr);
     }
   }

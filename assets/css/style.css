@@ -1149,9 +1149,11 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-height: 120px;
   padding-right: 20px;
   padding-left: 20px;
+}
+.clients__card-image {
+  width: 100%;
 }
 
 .publications {
@@ -1849,6 +1851,7 @@ h2 {
     font-size: 18px;
   }
   .services__grid {
+    gap: 20px;
     padding-top: 20px;
   }
   .services-item__title {
@@ -1972,7 +1975,6 @@ h2 {
 }
 @media (max-width: 991.8px) and (min-width: 576px) {
   .services__grid {
-    gap: 40px;
     grid-template-columns: repeat(2, 1fr);
   }
   .publications__wrapper {
@@ -2144,7 +2146,6 @@ h2 {
     display: block;
   }
   .services__grid {
-    gap: 40px;
     grid-template-columns: repeat(1, 1fr);
   }
   .services-item {
