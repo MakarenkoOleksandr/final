@@ -1,0 +1,79 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.contacts {
+  display: flex;
+  align-items: center;
+
+  column-gap: 25px;
+  @include md {
+    align-items: center;
+    flex-direction: column;
+
+    row-gap: $gap;
+  }
+  &__socials {
+    position: relative;
+
+    @include md-min {
+      &::after {
+        position: absolute;
+        top: 17px;
+        right: -17px;
+
+        width: 6px;
+        height: 6px;
+
+        content: "";
+
+        border-radius: 3px;
+        background-color: $color-grey-text;
+      }
+    }
+  }
+  &__social {
+    &-img {
+      color: $color-active-regular;
+      &:hover {
+        transition: 0.3s;
+
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__phones {
+    position: relative;
+
+    @include md-min {
+      &::after {
+        position: absolute;
+        top: 6px;
+        right: -17px;
+
+        width: 6px;
+        height: 6px;
+
+        content: "";
+
+        border-radius: 3px;
+        background-color: $color-grey-text;
+      }
+    }
+  }
+
+  &__phone {
+    &-url {
+      color: $color-main-alt;
+
+      font-weight: 700;
+    }
+  }
+  &__mail {
+    &-url {
+      color: $color-active-regular;
+
+      font-weight: 700;
+    }
+  }
+}

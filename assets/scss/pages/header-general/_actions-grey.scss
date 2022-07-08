@@ -65,9 +65,27 @@
     }
     &-ru {
       color: $color-grey-text;
+
+      @extend %lang-size;
+
+      &:hover {
+        padding: 5px;
+
+        border-radius: 8px;
+        background-color: $color-grey-bg-alt;
+      }
     }
     &-en {
       color: $color-grey-text;
+
+      @extend %lang-size;
+
+      &:hover {
+        padding: 5px;
+
+        border-radius: 8px;
+        background-color: $color-grey-bg-alt;
+      }
     }
   }
 
@@ -103,11 +121,8 @@
       color: $color-grey-text;
     }
   }
-
-  &__phone {
+  &__phones {
     position: relative;
-
-    font-weight: 700;
     &::after {
       position: absolute;
       top: 7px;
@@ -125,6 +140,11 @@
         display: none;
       }
     }
+  }
+  &__phone {
+    position: relative;
+
+    font-weight: 700;
     &-url {
       color: $color-grey-text;
 
@@ -135,6 +155,16 @@
   &__socials {
     @include sm {
       display: none;
+    }
+  }
+  &__social {
+    &-img {
+      color: $color-grey-text;
+      &:hover {
+        transition: 0.3s;
+
+        color: $color-active-regular;
+      }
     }
   }
 }

@@ -3,10 +3,10 @@
 
 .menu-grey {
   &__list {
+    list-style: none;
+
     @include sm-min {
       display: flex;
-
-      list-style: none;
 
       gap: 15px;
     }
@@ -22,8 +22,6 @@
       height: 100vh;
       padding: $gap;
 
-      list-style: none;
-
       box-shadow: -5px 0 5px rgba($color-black, 0.5);
 
       &.active {
@@ -35,6 +33,19 @@
 
         row-gap: $gap;
       }
+    }
+  }
+  &__item {
+    @include sm {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+      padding-top: $gap-sm;
+      padding-bottom: $gap-sm;
+
+      border-radius: 12px;
+      background-color: $color-grey-bg-alt;
     }
   }
 

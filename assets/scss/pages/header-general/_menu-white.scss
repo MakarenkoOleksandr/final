@@ -37,11 +37,24 @@
       }
     }
   }
-  &__link {
-    color: $color-white;
+
+  &__item {
+    @include sm {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+      padding-top: $gap-sm;
+      padding-bottom: $gap-sm;
+
+      border-radius: 12px;
+      background-color: $color-main-alt;
+    }
   }
 
   &__link {
+    color: $color-white;
+
     font-size: 18px;
   }
 

@@ -27,54 +27,65 @@
     column-gap: $gap-sm;
 
     &-active {
-      align-self: center;
-
-      margin-right: -5px;
-      padding: 5px;
-
-      border-radius: 8px;
-      background: $color-accent;
+      background-color: $color-accent;
     }
     &-active:hover {
       @include sm-min {
         color: $color-white !important;
       }
     }
-  }
+    &::after {
+      position: absolute;
+      top: 12px;
+      right: -16px;
 
-  &__languages::after {
-    position: absolute;
-    top: 12px;
-    right: -16px;
+      width: 6px;
+      height: 6px;
 
-    width: 6px;
-    height: 6px;
+      content: "";
 
-    content: "";
+      border-radius: 6px;
+      background-color: $color-grey-separator;
 
-    border-radius: 6px;
-    background-color: $color-grey-separator;
-
-    @include sm {
-      display: none;
+      @include sm {
+        display: none;
+      }
     }
   }
+
   &__language {
     &-ua {
       color: $color-white;
+
+      @extend %lang-size;
     }
     &-ru {
       color: $color-white;
 
+      @extend %lang-size;
       @include sm {
         color: $color-grey-text;
+      }
+      &:hover {
+        padding: 5px;
+
+        border-radius: 8px;
+        background-color: $color-grey-bg-alt;
       }
     }
     &-en {
       color: $color-white;
 
+      @extend %lang-size;
       @include sm {
         color: $color-grey-text;
+      }
+
+      &:hover {
+        padding: 5px;
+
+        border-radius: 8px;
+        background-color: $color-grey-bg-alt;
       }
     }
   }
@@ -87,25 +98,25 @@
     @include sm {
       display: none;
     }
-  }
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: -16px;
 
-  &__locations::after {
-    position: absolute;
-    top: 7px;
-    right: -16px;
+      width: 6px;
+      height: 6px;
 
-    width: 6px;
-    height: 6px;
+      content: "";
 
-    content: "";
+      border-radius: 6px;
+      background-color: $color-grey-separator;
 
-    border-radius: 6px;
-    background-color: $color-grey-separator;
-
-    @include sm {
-      display: none;
+      @include sm {
+        display: none;
+      }
     }
   }
+
   &__location {
     &-url {
       color: $color-white;
@@ -116,40 +127,48 @@
     position: relative;
 
     font-weight: 700;
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: -16px;
+
+      width: 6px;
+      height: 6px;
+
+      content: "";
+
+      border-radius: 6px;
+      background-color: $color-grey-separator;
+
+      @include sm {
+        display: none;
+      }
+    }
   }
   &__phone {
     &-url {
       color: $color-white;
-    }
-  }
 
-  &__phones::after {
-    position: absolute;
-    top: 7px;
-    right: -16px;
-
-    width: 6px;
-    height: 6px;
-
-    content: "";
-
-    border-radius: 6px;
-    background-color: $color-grey-separator;
-
-    @include sm {
-      display: none;
-    }
-  }
-
-  &__phone-url {
-    @include sm {
-      color: $color-grey-text;
+      @include sm {
+        color: $color-grey-text;
+      }
     }
   }
 
   &__socials {
     @include sm {
       display: none;
+    }
+  }
+
+  &__social {
+    &-img {
+      color: $color-white;
+      &:hover {
+        transition: 0.3s;
+
+        color: $color-accent;
+      }
     }
   }
 }

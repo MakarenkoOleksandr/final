@@ -348,6 +348,14 @@ template {
   -webkit-text-fill-color: transparent;
 }
 
+.actions-white__language-ua, .actions-white__language-ru, .actions-white__language-en, .actions-grey__language-ru, .actions-grey__language-en {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: -5px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
 /* ul */
 /* xl */
 /* lg */
@@ -534,8 +542,18 @@ h2 {
 .actions-grey__language-ru {
   color: #b3b3ba;
 }
+.actions-grey__language-ru:hover {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #ededf7;
+}
 .actions-grey__language-en {
   color: #b3b3ba;
+}
+.actions-grey__language-en:hover {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #ededf7;
 }
 .actions-grey__locations {
   position: relative;
@@ -554,11 +572,10 @@ h2 {
 .actions-grey__location-url {
   color: #b3b3ba;
 }
-.actions-grey__phone {
+.actions-grey__phones {
   position: relative;
-  font-weight: 700;
 }
-.actions-grey__phone::after {
+.actions-grey__phones::after {
   position: absolute;
   top: 7px;
   right: -16px;
@@ -568,9 +585,22 @@ h2 {
   border-radius: 6px;
   background-color: #e6e6f0;
 }
+.actions-grey__phone {
+  position: relative;
+  font-weight: 700;
+}
 .actions-grey__phone-url {
   color: #b3b3ba;
   font-weight: 700;
+}
+.actions-grey__social-img {
+  color: #b3b3ba;
+}
+.actions-grey__social-img:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #24a3ff;
 }
 
 .actions-white {
@@ -602,12 +632,7 @@ h2 {
           column-gap: 10px;
 }
 .actions-white__languages-active {
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-right: -5px;
-  padding: 5px;
-  border-radius: 8px;
-  background: #f0145a;
+  background-color: #f0145a;
 }
 .actions-white__languages::after {
   position: absolute;
@@ -625,8 +650,18 @@ h2 {
 .actions-white__language-ru {
   color: #ffffff;
 }
+.actions-white__language-ru:hover {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #ededf7;
+}
 .actions-white__language-en {
   color: #ffffff;
+}
+.actions-white__language-en:hover {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #ededf7;
 }
 .actions-white__locations {
   position: relative;
@@ -649,9 +684,6 @@ h2 {
   position: relative;
   font-weight: 700;
 }
-.actions-white__phone-url {
-  color: #ffffff;
-}
 .actions-white__phones::after {
   position: absolute;
   top: 7px;
@@ -661,6 +693,22 @@ h2 {
   content: "";
   border-radius: 6px;
   background-color: #e6e6f0;
+}
+.actions-white__phone-url {
+  color: #ffffff;
+}
+.actions-white__social-img {
+  color: #ffffff;
+}
+.actions-white__social-img:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #f0145a;
+}
+
+.menu-grey__list {
+  list-style: none;
 }
 .menu-grey__link {
   color: #24a3ff;
@@ -717,8 +765,6 @@ h2 {
 }
 .menu-white__link {
   color: #ffffff;
-}
-.menu-white__link {
   font-size: 18px;
 }
 .menu-white__hamburger {
@@ -837,6 +883,11 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+circle:hover,
+path:hover {
+  stroke: #f0145a;
 }
 
 .experience {
@@ -1472,7 +1523,8 @@ h2 {
   font-size: 12px;
   font-weight: 700;
 }
-.footer-actions__contacts {
+
+.contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1483,17 +1535,26 @@ h2 {
      -moz-column-gap: 25px;
           column-gap: 25px;
 }
-.footer-actions__contacts-socials {
+.contacts__socials {
   position: relative;
 }
-.footer-actions__contacts-phones {
+.contacts__social-img {
+  color: #24a3ff;
+}
+.contacts__social-img:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #f0145a;
+}
+.contacts__phones {
   position: relative;
 }
-.footer-actions__contacts-phone {
+.contacts__phone-url {
   color: #46466e;
   font-weight: 700;
 }
-.footer-actions__contacts-mail {
+.contacts__mail-url {
   color: #24a3ff;
   font-weight: 700;
 }
@@ -1561,7 +1622,6 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    list-style: none;
     gap: 15px;
   }
   .menu-grey__hamburger {
@@ -1792,7 +1852,7 @@ h2 {
     border-radius: 3px;
     background-color: #b3b3ba;
   }
-  .footer-actions__contacts-socials::after {
+  .contacts__socials::after {
     position: absolute;
     top: 17px;
     right: -17px;
@@ -1802,7 +1862,7 @@ h2 {
     border-radius: 3px;
     background-color: #b3b3ba;
   }
-  .footer-actions__contacts-phones::after {
+  .contacts__phones::after {
     position: absolute;
     top: 6px;
     right: -17px;
@@ -1851,8 +1911,8 @@ h2 {
     font-size: 18px;
   }
   .services__grid {
-    gap: 20px;
     padding-top: 20px;
+    gap: 20px;
   }
   .services-item__title {
     font-size: 18px;
@@ -1962,7 +2022,7 @@ h2 {
             flex-direction: column;
     row-gap: 10px;
   }
-  .footer-actions__contacts {
+  .contacts {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2011,7 +2071,7 @@ h2 {
   .actions-grey__locations::after {
     display: none;
   }
-  .actions-grey__phone::after {
+  .actions-grey__phones::after {
     display: none;
   }
   .actions-grey__socials {
@@ -2055,7 +2115,6 @@ h2 {
     width: 170px;
     height: 100vh;
     padding: 20px;
-    list-style: none;
     -webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5);
             box-shadow: -5px 0 5px rgba(0, 0, 0, 0.5);
   }
@@ -2072,6 +2131,19 @@ h2 {
             flex-direction: column;
     padding-top: 40px;
     row-gap: 20px;
+  }
+  .menu-grey__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    background-color: #ededf7;
   }
   .menu-white__list {
     position: absolute;
@@ -2099,6 +2171,19 @@ h2 {
             flex-direction: column;
     padding-top: 40px;
     row-gap: 20px;
+  }
+  .menu-white__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    background-color: #46466e;
   }
   .team__photo {
     display: none;
