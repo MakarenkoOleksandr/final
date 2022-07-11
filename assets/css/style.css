@@ -340,10 +340,18 @@ template {
   padding-left: 20px;
 }
 
-.statistic-item__value, .aboutpage-header__content-title, .slider__header.active, h2 {
+.statistic-item__value, .aboutpage-header__content-title, h2 {
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #f0145a), to(#ef8080));
   background: -o-linear-gradient(left, #f0145a 1%, #ef8080 100%);
   background: linear-gradient(90deg, #f0145a 1%, #ef8080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider__header.active {
+  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #ef8080), to(#f0145a));
+  background: -o-linear-gradient(left, #ef8080 35%, #f0145a 100%);
+  background: linear-gradient(90deg, #ef8080 35%, #f0145a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

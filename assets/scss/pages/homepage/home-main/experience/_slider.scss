@@ -66,7 +66,7 @@
     }
 
     &.active {
-      @extend %text-liner-gradient-red;
+      @extend %text-liner-gradient-slider;
       @include md-min {
         &::after {
           position: absolute;
