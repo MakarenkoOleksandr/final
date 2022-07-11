@@ -1618,7 +1618,7 @@ path:hover {
   .cases__grid {
     grid-template-areas: "item-1 item-1 item-3 item-3 item-4" "item-2 item-2 item-3 item-3 item-4" "item-5 item-6 item-6 item-7 item-7";
     grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr 2fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr 1fr;
   }
   .item-header {
     grid-area: item-1;
