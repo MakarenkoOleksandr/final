@@ -25,14 +25,9 @@
     }
   }
   &__card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding-right: $gap;
-    padding-left: $gap;
     &-image {
       width: 100%;
+      height: 100%;
     }
   }
 }

@@ -1,7 +1,7 @@
 @use "../../../../presets" as *;
 @use "../../../../mixins" as *;
 
-.destinations {
+.achievements {
   padding-top: 30px;
   padding-bottom: 30px;
 
@@ -38,15 +38,6 @@
     }
   }
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 110px;
-    padding: 1em;
-
-    border-radius: 12px;
-    background-color: $color-white;
     &-image {
       width: 100%;
     }
