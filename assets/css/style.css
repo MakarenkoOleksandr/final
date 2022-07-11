@@ -818,10 +818,7 @@ h2 {
 
 .homepage-header__content {
   position: relative;
-  top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -829,23 +826,32 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100vh;
 }
 .homepage-header__content-title {
-  position: relative;
-  top: 175px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 20px;
+  margin: 0;
+  width: 100%;
   max-width: 600px;
   text-align: center;
   color: #ffffff;
   font-size: 38px;
   font-weight: 500;
+}
+.homepage-header__content-image {
+  -webkit-transform: translateY(30%);
+      -ms-transform: translateY(30%);
+          transform: translateY(30%);
 }
 
 .homepage-header {
@@ -855,10 +861,10 @@ h2 {
 }
 .homepage-header::after {
   position: absolute;
+  top: 65%;
   right: 0;
   bottom: 0;
   left: 0;
-  min-height: 200px;
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, color-stop(16.67%, rgba(50, 50, 100, 0)), to(#323264));
   background: -o-linear-gradient(top, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
